@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class BensonManager : MonoBehaviour
 {
-    public int bensonBalls;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int caughtBalls;
+    [SerializeField] int objective;
 
-    // Update is called once per frame
     void Update()
     {
         Win();
@@ -19,7 +14,7 @@ public class BensonManager : MonoBehaviour
 
     public void Win()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (caughtBalls >= objective)
         {
             SceneManager.instance.LoadScene();
         }
