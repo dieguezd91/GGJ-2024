@@ -323,7 +323,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &529227457
 Rigidbody2D:
@@ -455,8 +455,65 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1605562816
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.007936358
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5068183
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.030254094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983434712364347427, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_Name
+      value: BallsSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c13fd079947422b4b910891ee25382e8, type: 3}
 --- !u!1 &1607807292
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +615,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1607807296
 MonoBehaviour:
