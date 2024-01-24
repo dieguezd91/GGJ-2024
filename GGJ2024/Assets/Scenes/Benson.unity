@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &309774409
 RectTransform:
   m_ObjectHideFlags: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
   objective: 5
   remainingTime: 10
   timer: {fileID: 2066879905}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 309774410}
 --- !u!4 &761803051
 Transform:
   m_ObjectHideFlags: 0
