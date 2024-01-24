@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
-    public float player2HorizontalInput;
-
+    public float xLimit = 8.5f;
     public float speed = 10f;
     
     // Start is called before the first frame update
@@ -26,6 +25,15 @@ public class PlayerController2 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
+        }
+        
+        if (transform.position.x < -xLimit)
+        {
+            transform.position = new Vector3(-xLimit, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > xLimit)
+        {
+            transform.position = new Vector3(xLimit, transform.position.y, transform.position.z);
         }
     }
 }
