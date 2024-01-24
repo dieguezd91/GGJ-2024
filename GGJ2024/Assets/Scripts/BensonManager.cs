@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class BensonManager : MonoBehaviour
 {
     public static BensonManager instance;
+    public GameObject benson;
     public int caughtBalls;
     [SerializeField] int objective;
     public float remainingTime;
@@ -18,7 +19,6 @@ public class BensonManager : MonoBehaviour
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -40,12 +40,11 @@ public class BensonManager : MonoBehaviour
 
     public void Win()
     {
-        SceneManager.instance.LoadScene();
+        GameManager.instance.NextGame();
     }
 
     public void Lose()
     {
-        gameOver.gameObject.SetActive(true);
-        Time.timeScale = 0;
+        GameManager.instance.GameOver();
     }
 }

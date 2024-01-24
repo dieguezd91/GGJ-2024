@@ -7,13 +7,13 @@ public class BallsSpawner : MonoBehaviour
     Rigidbody2D rb;
     Transform middleReferencePoint;
     private int movingRight;
-    [SerializeField] float movementVelocity;
+    public float movementVelocity;
     [SerializeField] float range;
     float distance;
 
     [SerializeField] GameObject ballSpawnpointRef;
     float lastBallSpawned;
-    [SerializeField] float ballSpawnCD;
+    public float ballSpawnCD;
     [SerializeField] GameObject ballPrefab;
 
     void Start()
