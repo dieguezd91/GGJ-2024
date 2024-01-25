@@ -1594,8 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0900f083e6c924898f1aa6578e56f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _base:
-  - {fileID: 11400000, guid: d8d4188c2af10cc4c98f46bc89e47ea9, type: 2}
+  maxCorrectGuesses: 4
   normalImage: {fileID: 1459729509}
   silhouette: {fileID: 735820972}
   correct: {fileID: 1009806486}

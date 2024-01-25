@@ -7,6 +7,7 @@ using TMPro;
 public class Guess : MonoBehaviour
 {
     private GuessBase[] _base;
+    [SerializeField] private int maxCorrectGuesses;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
     [SerializeField] private TMP_Text correct;
@@ -15,10 +16,12 @@ public class Guess : MonoBehaviour
     [SerializeField] private Button[] buttons;
 
     private GuessBase currentGuess;
+    private int correctGuesses;
 
 
     private void Awake()
     {
+        _base = Resources.LoadAll<GuessBase>("");
         AssigningValues();
     }
 
@@ -30,21 +33,41 @@ public class Guess : MonoBehaviour
 
     public void CorrectGuess()
     {
+        ClearListeners();
         normalImage.gameObject.SetActive(true);
         silhouette.gameObject.SetActive(false);
         correct.gameObject.SetActive(true);
+        correctGuesses++;
+
+        //Esperar unos segundos
+
+        if(correctGuesses == maxCorrectGuesses)
+        {
+            correctGuesses = 0;
+            //pasar al proximo minijuego
+        }
+        else
+        {
+            silhouette.gameObject.SetActive(true);
+            normalImage.gameObject.SetActive(false);
+            correct.gameObject.SetActive(false);
+            AssigningValues();
+        }
     }
 
     public void IncorrectGuess()
     {
+        ClearListeners();
         normalImage.gameObject.SetActive(true);
         silhouette.gameObject.SetActive(false);
         incorrect.gameObject.SetActive(true);
+        //perder una vida
+        //pasar de minijuego
     }
 
     public void AssigningValues()
     {
-        _base = Resources.LoadAll<GuessBase>("");
+        
         currentGuess = GetRandomGuess();
         normalImage.sprite = currentGuess.Normal;
         silhouette.sprite = currentGuess.Silhouette;
@@ -63,6 +86,14 @@ public class Guess : MonoBehaviour
 
             buttons[i].onClick.AddListener(IncorrectGuess);
             buttonsText[i].text = (string)stack.Pop();
+        }
+    }
+
+    public void ClearListeners()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            buttons[i].onClick.RemoveAllListeners();
         }
     }
 }
