@@ -6,7 +6,7 @@ using TMPro;
 
 public class Guess : MonoBehaviour
 {
-    [SerializeField] private GuessBase[] _base;
+    private GuessBase[] _base;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
     [SerializeField] private TMP_Text correct;
@@ -30,20 +30,21 @@ public class Guess : MonoBehaviour
 
     public void CorrectGuess()
     {
-        normalImage.gameObject.SetActive(false);
-        silhouette.gameObject.SetActive(true);
+        normalImage.gameObject.SetActive(true);
+        silhouette.gameObject.SetActive(false);
         correct.gameObject.SetActive(true);
     }
 
     public void IncorrectGuess()
     {
-        normalImage.gameObject.SetActive(false);
-        silhouette.gameObject.SetActive(true);
+        normalImage.gameObject.SetActive(true);
+        silhouette.gameObject.SetActive(false);
         incorrect.gameObject.SetActive(true);
     }
 
     public void AssigningValues()
     {
+        _base = Resources.LoadAll<GuessBase>("");
         currentGuess = GetRandomGuess();
         normalImage.sprite = currentGuess.Normal;
         silhouette.sprite = currentGuess.Silhouette;
