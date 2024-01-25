@@ -167,7 +167,7 @@ MonoBehaviour:
   range: 12
   ballSpawnpointRef: {fileID: 2229584398883717167}
   ballSpawnCD: 2.5
-  ballPrefab: {fileID: 221396552202451710, guid: 8543e1840e0ec5448a2c8c450772708e, type: 3}
+  ballPrefab: {fileID: 221396552202451710, guid: ea4dd636954479e4f999fc46fcf7b5d3, type: 3}
 --- !u!50 &4057797508132739376
 Rigidbody2D:
   serializedVersion: 4
