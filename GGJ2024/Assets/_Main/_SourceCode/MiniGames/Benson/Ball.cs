@@ -26,18 +26,7 @@ public class Ball : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Floor")
-        {
-            BensonManager.instance.Lose();
-            Collided(false);
-        }
-        else if (col.gameObject.tag == "Player")
-            Collided(true);
-    }
-
-    void Collided(bool withPlayer)
+    public void Collided(bool withPlayer)
     {
         Destroy(gameObject);
     }

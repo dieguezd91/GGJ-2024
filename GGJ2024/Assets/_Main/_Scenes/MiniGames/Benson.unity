@@ -558,14 +558,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7518488927208651405, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7518488927208651405, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7518488927208651504, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
       propertyPath: m_Name
       value: Player2
@@ -576,11 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518488927208651507, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7518488927208651507, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.47
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7518488927208651507, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - Player
+  - OrangePlayer
+  - BluePlayer
   layers:
   - Default
   - TransparentFX
