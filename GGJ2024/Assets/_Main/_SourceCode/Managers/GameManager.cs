@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     public void NextGame()
     {
-
         if (tutorial)              //En la ronda 1, los minijuegos se juegan en orden.
         {
             if (currentGame == 4)

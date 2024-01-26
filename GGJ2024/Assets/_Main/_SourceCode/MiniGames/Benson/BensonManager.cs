@@ -37,7 +37,7 @@ public class BensonManager : MonoBehaviour
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
-        timer.text = string.Format("{0}:{1}", minutes, seconds);
+        timer.text = string.Format("{00}:{01}", minutes, seconds);
         
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -45,11 +45,11 @@ public class BensonManager : MonoBehaviour
         }
     }
 
-    private void Win()
+    public void Win()
     {
-        //NextGame();
+        GameManager.instance.NextGame();
         Debug.Log("Win");
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     public void Lose()
@@ -71,7 +71,5 @@ public class BensonManager : MonoBehaviour
             player1.SetActive(true);
             currentCharacter = player1;
         }
-
-        
     } 
 }    

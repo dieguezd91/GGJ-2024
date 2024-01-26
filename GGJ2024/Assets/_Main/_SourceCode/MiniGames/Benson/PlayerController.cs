@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,24 +13,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        
     }
 
     private void Move()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        
+        horizontalInput = Input.GetAxis("Horizontal"); 
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
         if (transform.position.x < -xLimit)
-        {
             transform.position = new Vector3(-xLimit, transform.position.y, transform.position.z);
-        }
         else if (transform.position.x > xLimit)
-        {
             transform.position = new Vector3(xLimit, transform.position.y, transform.position.z);
-        }
     }
-
-
 }
