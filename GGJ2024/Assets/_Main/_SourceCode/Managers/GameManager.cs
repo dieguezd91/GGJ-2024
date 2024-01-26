@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] List<SceneAsset> availableGames = new List<SceneAsset>();
     public int currentGame;
+    public int lastGamePlayed;
+    private bool tutorial;
     int currentRound;
 
     private void Start()
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        tutorial = true;
     }
 
     private void Update()
@@ -27,30 +30,48 @@ public class GameManager : MonoBehaviour
 
     public void NextGame()
     {
-                //En la ronda 1, los minijuegos se juegan en orden.
-        if(currentRound == 1)
-            switch (currentGame)
-            {
-                case 0:
-                    SceneManagerScript.instance.LoadScene(1);
-                    break;
-                case 1:
-                    SceneManagerScript.instance.LoadScene(2);
-                    break;
-                case 2:
-                    SceneManagerScript.instance.LoadScene(3);
-                    break;
-                case 3:
-                    SceneManagerScript.instance.LoadScene(4);
-                    break;
-                default:
-                    Debug.Log("Error");
-                    break;
-            }
 
-                // A partir de la ronda 2, los minijuegos se juegan de manera aleatoria
-        int r = Random.Range(1, availableGames.Count);
-        while(r == currentGame) Random.Range(1, availableGames.Count);
+        if (tutorial)              //En la ronda 1, los minijuegos se juegan en orden.
+        {
+            if (currentGame == 4)
+            {
+                tutorial = false;
+                currentRound++;
+                currentGame = 0;
+                LoadRandomLevel();
+            }
+            else
+            {
+                currentGame++;
+                SceneManagerScript.instance.LoadScene(currentGame);
+            }
+        }
+        else
+        {
+            if (currentGame == 4)
+            {
+                currentRound++;
+                currentGame = 0;
+            }
+            LoadRandomLevel();
+        }
+    }
+
+    private void LoadRandomLevel()
+    {
+        Debug.Log("LoadRandomLevel");
+        //// A partir de la ronda 2, los minijuegos se juegan de manera aleatoria
+        //SceneAsset previousGame = availableGames[SceneManagerScript.instance.scene];
+        //Debug.Log(previousGame.name);
+        //Debug.Log(previousGame);
+        //availableGames.Remove(previousGame);
+        //int r = Random.Range(1, availableGames.Count);
+        //Debug.Log(r);
+        //SceneManagerScript.instance.LoadScene(r);
+        //availableGames.Add(previousGame);
+        //currentGame++;
+
+        //availableGames.Sort()
     }
 
     public void GameOver()

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagerScript : MonoBehaviour
 {
     public static SceneManagerScript instance;
+    public int scene;
     
     void Start()
     {
@@ -15,5 +16,6 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadScene(int scene)
     {
         SceneManager.LoadScene(scene);
+        this.scene = scene;
     }
 }
