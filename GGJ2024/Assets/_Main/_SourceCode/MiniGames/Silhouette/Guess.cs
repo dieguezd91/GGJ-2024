@@ -8,11 +8,13 @@ public class Guess : MonoBehaviour
 {
     private GuessBase[] _base;
     [SerializeField] private int maxCorrectGuesses;
+    [SerializeField] private float timerBetweenGuesses;
+    [SerializeField] private float timerMinigame;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
     [SerializeField] private TMP_Text correct;
     [SerializeField] private TMP_Text incorrect;
-    [SerializeField] private TMP_Text[] buttonsText;
+    [SerializeField] private Image[] buttonsText;
     [SerializeField] private Button[] buttons;
 
     private GuessBase currentGuess;
@@ -80,12 +82,12 @@ public class Guess : MonoBehaviour
             if (buttons[i] == buttons[randomButton])
             {
                 buttons[i].onClick.AddListener(CorrectGuess);
-                buttonsText[i].text = currentGuess.CorrectAnswer;
+                buttonsText[i].sprite = currentGuess.CorrectAnswer;
                 continue;
             }
 
             buttons[i].onClick.AddListener(IncorrectGuess);
-            buttonsText[i].text = (string)stack.Pop();
+            buttonsText[i].sprite= (Sprite)stack.Pop();
         }
     }
 

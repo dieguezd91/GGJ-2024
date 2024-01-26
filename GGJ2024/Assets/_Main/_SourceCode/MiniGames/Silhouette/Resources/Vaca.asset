@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal: {fileID: 21300000, guid: a4ced07f270e9a24c99647f46daff93a, type: 3}
   silhouette: {fileID: 21300000, guid: 124a03a333eb5b545a56b268cfee748b, type: 3}
-  correctAnswer: Vaca
+  correctAnswer: {fileID: 21300000, guid: a4ced07f270e9a24c99647f46daff93a, type: 3}
   incorrectAnswers:
-  - Perro
-  - Gato
-  - Pollo
+  - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
+  - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
+  - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
