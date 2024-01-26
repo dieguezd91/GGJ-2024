@@ -8,13 +8,13 @@ public class GuessBase : ScriptableObject
 {
     [SerializeField] private Sprite normal;
     [SerializeField] private Sprite silhouette;
-    [SerializeField] private Sprite correctAnswer;
-    [SerializeField] private Sprite[] incorrectAnswers;
+    [SerializeField] private Sprite[] incorrectAnswers = new Sprite[3];
+    
 
 
     public Sprite Normal => normal;
     public Sprite Silhouette => silhouette;
-    public Sprite CorrectAnswer => correctAnswer;
+    public Sprite CorrectAnswer => normal;
     public Sprite[] IncorrectAnswers => incorrectAnswers;
 
 
