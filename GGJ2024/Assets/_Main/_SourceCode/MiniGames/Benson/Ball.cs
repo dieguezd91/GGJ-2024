@@ -7,8 +7,8 @@ public class Ball : MonoBehaviour
     Rigidbody2D rb;
     float lastGravityUpdate;
     [SerializeField] float velocityIncreaseValue;
-    
-    void Start()
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         lastGravityUpdate = Time.time;
@@ -19,14 +19,14 @@ public class Ball : MonoBehaviour
         if (Time.time >= lastGravityUpdate + 1)
         {
             rb.gravityScale += .3f;
-            BensonManager.instance.benson.GetComponent<BallsSpawner>().movementVelocity += velocityIncreaseValue;
-            if(BensonManager.instance.benson.GetComponent<BallsSpawner>().ballSpawnCD >= 0.75f) 
-                BensonManager.instance.benson.GetComponent<BallsSpawner>().ballSpawnCD -= 0.25f;
+            LevelManager.instance.benson.GetComponent<BensonController>().movementVelocity += velocityIncreaseValue;
+            if(LevelManager.instance.benson.GetComponent<BensonController>().ballSpawnCd >= 0.75f) 
+                LevelManager.instance.benson.GetComponent<BensonController>().ballSpawnCd -= 0.25f;
             lastGravityUpdate = Time.time;
         }
     }
 
-    public void Collided(bool withPlayer)
+    protected void Collided(bool withPlayer)
     {
         Destroy(gameObject);
     }

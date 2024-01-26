@@ -5,17 +5,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class BensonManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public static BensonManager instance;
+    public static LevelManager instance;
     public GameObject benson;
     public float remainingTime;
     public TextMeshProUGUI timer;
     public GameObject player1;
     public GameObject player2;
     public GameObject currentCharacter;
+    public Vector3 lastPosition;
+    public Vector3 currentPosition;
 
-    private void Start()
+private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
@@ -23,7 +25,7 @@ public class BensonManager : MonoBehaviour
         currentCharacter = player1;
     }
 
-    void Update()
+    private void Update()
     {
         if (remainingTime > 0)
         {
@@ -37,15 +39,17 @@ public class BensonManager : MonoBehaviour
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
-        timer.text = string.Format("{00}:{01}", minutes, seconds);
+        timer.text = $"{minutes}:{seconds}";
         
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SwitchCharacter();   
         }
+        
+        //currentPosition = currentCharacter.transform.position;
     }
 
-    public void Win()
+    private void Win()
     {
         GameManager.instance.NextGame();
         Debug.Log("Win");
@@ -71,5 +75,9 @@ public class BensonManager : MonoBehaviour
             player1.SetActive(true);
             currentCharacter = player1;
         }
+        
+        //currentPosition = currentCharacter.transform.position;
+    
+        //lastPosition = currentPosition;
     } 
 }    

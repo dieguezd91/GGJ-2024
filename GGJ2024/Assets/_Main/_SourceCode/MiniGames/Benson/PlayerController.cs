@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float xLimit = 8.5f;
     public float speed = 10f;
 
-    void Update()
+    private void Update()
     {
         Move();
     }

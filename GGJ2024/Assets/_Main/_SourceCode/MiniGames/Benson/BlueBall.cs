@@ -8,7 +8,7 @@ public class BlueBall : Ball
     {
         if (col.gameObject.tag != "BluePlayer")
         {
-            BensonManager.instance.Lose();
+            LevelManager.instance.Lose();
             Collided(false);
         }
         else if (col.gameObject.CompareTag("BluePlayer"))
