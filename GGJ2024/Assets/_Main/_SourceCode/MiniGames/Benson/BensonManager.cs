@@ -9,16 +9,18 @@ public class BensonManager : MonoBehaviour
 {
     public static BensonManager instance;
     public GameObject benson;
-    public int caughtBalls;
-    [SerializeField] int objective;
     public float remainingTime;
     public TextMeshProUGUI timer;
-    public TextMeshProUGUI gameOver;
+    public GameObject player1;
+    public GameObject player2;
+    public GameObject currentCharacter;
 
     private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
+
+        currentCharacter = player1;
     }
 
     void Update()
@@ -36,15 +38,40 @@ public class BensonManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timer.text = string.Format("{0}:{1}", minutes, seconds);
+        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SwitchCharacter();   
+        }
     }
 
-    public void Win()
+    private void Win()
     {
-        GameManager.instance.NextGame();
+        //NextGame();
+        Debug.Log("Win");
+        Time.timeScale = 0;
     }
 
     public void Lose()
     {
         GameManager.instance.GameOver();
     }
-}
+
+    private void SwitchCharacter()
+    {
+        if(currentCharacter == player1)
+        {
+            player1.SetActive(false);
+            player2.SetActive(true);
+            currentCharacter = player2;
+        }
+        else if (currentCharacter == player2)
+        {
+            player2.SetActive(false);
+            player1.SetActive(true);
+            currentCharacter = player1;
+        }
+
+        
+    } 
+}    

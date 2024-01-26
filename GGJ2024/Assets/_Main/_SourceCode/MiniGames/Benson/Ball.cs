@@ -39,7 +39,6 @@ public class Ball : MonoBehaviour
 
     void Collided(bool withPlayer)
     {
-        if(withPlayer) GameObject.FindWithTag("GameController").GetComponent<BensonManager>().caughtBalls++;
         Destroy(gameObject);
     }
 }

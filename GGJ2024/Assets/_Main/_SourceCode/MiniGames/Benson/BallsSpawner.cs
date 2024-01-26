@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BallsSpawner : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class BallsSpawner : MonoBehaviour
     [SerializeField] GameObject ballSpawnpointRef;
     float lastBallSpawned;
     public float ballSpawnCD;
-    [SerializeField] GameObject ballPrefab;
+    [SerializeField] GameObject blueBallPrefab;
+    [SerializeField] GameObject orangeBallPrefab;
 
     void Start()
     {
@@ -41,12 +43,22 @@ public class BallsSpawner : MonoBehaviour
 
     void AttemptToSpawnBall()
     {
-        if(Time.time >= lastBallSpawned + ballSpawnCD) SpawnBall();
+        if (Time.time >= lastBallSpawned + ballSpawnCD)
+        {
+            SpawnBlueBall();
+            SpawnOrangeBall();
+        }
     }
 
-    void SpawnBall()
+    void SpawnBlueBall()
     {
         lastBallSpawned = Time.time;
-        GameObject newBall = Instantiate(ballPrefab, ballSpawnpointRef.transform.position, ballSpawnpointRef.transform.rotation);
+        GameObject newBall = Instantiate(blueBallPrefab, ballSpawnpointRef.transform.position, ballSpawnpointRef.transform.rotation);
+    }
+    
+    void SpawnOrangeBall()
+    {
+        lastBallSpawned = Time.time;
+        GameObject newBall = Instantiate(orangeBallPrefab, ballSpawnpointRef.transform.position, ballSpawnpointRef.transform.rotation);
     }
 }

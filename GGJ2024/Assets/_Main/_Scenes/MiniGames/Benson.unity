@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ed1d1d223137d47b2277dec8a04c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1HorizontalInput: 0
+  horizontalInput: 0
   xLimit: 8.5
   speed: 10
 --- !u!70 &529227454
@@ -630,11 +630,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benson: {fileID: 1616024180}
-  caughtBalls: 0
-  objective: 5
   remainingTime: 10
   timer: {fileID: 2066879905}
-  gameOver: {fileID: 309774410}
+  player1: {fileID: 529227452}
+  player2: {fileID: 1607807292}
+  currentCharacter: {fileID: 0}
 --- !u!4 &761803051
 Transform:
   m_ObjectHideFlags: 0
@@ -954,16 +954,16 @@ GameObject:
   - component: {fileID: 1607807295}
   - component: {fileID: 1607807294}
   - component: {fileID: 1607807293}
-  - component: {fileID: 1607807296}
   - component: {fileID: 1607807297}
   - component: {fileID: 1607807298}
+  - component: {fileID: 1607807299}
   m_Layer: 7
   m_Name: Player2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!70 &1607807293
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1047,18 +1047,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1607807296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607807292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fbf8ad064abce442b455431cdf451e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1607807297
 Rigidbody2D:
   serializedVersion: 4
@@ -1096,6 +1084,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.86}
   m_Size: {x: 1.58, y: 0.5}
   m_Direction: 1
+--- !u!114 &1607807299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607807292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ed1d1d223137d47b2277dec8a04c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: 0
+  xLimit: 8.5
+  speed: 10
 --- !u!1 &1616024180 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7983434712364347427, guid: c13fd079947422b4b910891ee25382e8, type: 3}
