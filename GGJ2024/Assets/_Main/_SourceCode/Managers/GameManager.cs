@@ -81,6 +81,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game over");
+        currentGame = 0;
+        currentRound = 0;
         LoadMainMenu();
     }
 
