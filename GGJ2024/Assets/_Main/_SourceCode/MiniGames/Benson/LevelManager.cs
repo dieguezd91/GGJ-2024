@@ -83,5 +83,6 @@ public class LevelManager : MonoBehaviour
     {
         controlsScreen.SetActive(true);
         yield return new WaitForSeconds(controlsShowingTime);
+        controlsScreen.SetActive(true);
     }
 }    
