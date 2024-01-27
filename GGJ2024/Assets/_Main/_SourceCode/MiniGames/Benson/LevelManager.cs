@@ -13,8 +13,10 @@ public class LevelManager : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public GameObject currentCharacter;
+    int points;
+    [SerializeField] int objective;
 
-private void Start()
+    private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
@@ -24,37 +26,39 @@ private void Start()
 
     private void Update()
     {
-        if (remainingTime > 0)
-        {
-            remainingTime -= Time.deltaTime;
-        }
+        if (remainingTime > 0) remainingTime -= Time.deltaTime;
         
         if (remainingTime <= 0)
         {
-            Win();
+            if (EndGame()) Win();
+            else Lose();
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timer.text = $"{minutes}:{seconds}";
-        
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SwitchCharacter();   
-        }
+
+        if (Input.GetKeyDown(KeyCode.Q)) SwitchCharacter();
     }
 
+    public void AddPoints(int pointsToAdd)
+    {
+        points += pointsToAdd;
+        Debug.Log($"+{pointsToAdd}");
+    }
+
+    bool EndGame()
+    {
+        return points >= objective;
+    }
+    
     private void Win()
     {
-        GameManager.instance.NextGame();
+        GameManager.instance.LoadNewLevel();
         Debug.Log("Win");
-        //Time.timeScale = 0;
     }
 
-    public void Lose()
-    {
-        GameManager.instance.GameOver();
-    }
+    public void Lose() => GameManager.instance.GameOver();
 
     private void SwitchCharacter()
     {
