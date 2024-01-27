@@ -44,9 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab78328d98b0d043a19ad8c9d587580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableGames:
+  currentGame: 0
+  lastGamePlayed: 0
+  array1: []
+  array2: []
+  games:
   - {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
   - {fileID: 102900000, guid: fc0a9b3c0b7223f4fb6617a7871fe205, type: 3}
   - {fileID: 102900000, guid: c2e09ae2afef9ba499708f1b0db2a202, type: 3}
   - {fileID: 102900000, guid: 964011861b97e2e4eb7156de9f5f5660, type: 3}
-  currentGame: 0

@@ -580,7 +580,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1043213620}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: NextGame
+        m_MethodName: LoadNewLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1434,38 +1434,6 @@ PrefabInstance:
     - target: {fileID: 3486234062740769370, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: currentGame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: games.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: array1.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: array2.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: games.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: games.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: games.Array.data[2]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: games.Array.data[3]
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: array1.Array.data[0]

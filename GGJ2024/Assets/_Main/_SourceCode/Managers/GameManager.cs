@@ -14,9 +14,9 @@ public class GameManager : MonoBehaviour
     public int lastGamePlayed;
     private bool tutorial;
     int currentRound;
-    public List<int> array1;
-    public List<int> array2;
-    [SerializeField] List<int> games;
+    public List<SceneAsset> array1;
+    public List<SceneAsset> array2;
+    [SerializeField] List<SceneAsset> games;
 
     private void Start()
     {
@@ -24,54 +24,67 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         tutorial = true;
-        array1 = games;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H)) LoadNewLevel();
-        if (Input.GetKeyDown(KeyCode.J)) SetNewRound();
     }
 
     private void Randomize()
     {
-        int b = array1.Count;
+        foreach (SceneAsset i in games) array1.Add(i);
+
+        array2.Clear();
+        int b = games.Count;
         for (int n = 0; n < b; n++)
         {
             int a = Random.Range(0, array1.Count);
-            array2.Insert(n, array1[a]);
+            array2.Add(array1[a]);
             array1.RemoveAt(a);
         }
     }
 
     void SetNewRound()
     {
-        currentRound++;
         currentGame = 0;
-        Randomize();
-        LoadNewLevel();
+        if (currentRound == 3)
+        {
+            currentRound = 0;
+            Randomize();
+            LoadMainMenu();
+        }
+        else
+        {
+            currentRound++;
+            Randomize();
+            LoadNewLevel();
+        }
     }
 
     public void LoadNewLevel()
-    {
-        if (tutorial)              //En la ronda 1, los minijuegos se juegan en orden.
+    {   
+        if (currentGame == 4)         //En la ronda 1, los minijuegos se juegan en orden.
         {
-            if (currentGame == 4)
-            {
-                SetNewRound();
-            }
-            else
-            {
-                currentGame++;
-                SceneManagerScript.instance.LoadScene(currentGame);
-            }
+            if (tutorial) tutorial = false;
+            SetNewRound();
+        }
+        else
+        {
+            currentGame++;
+            if (tutorial) SceneManagerScript.instance.LoadScene(currentGame);
+            else SceneManager.LoadScene(array2[currentGame-1].name);
+            Debug.Log(currentGame);
         }
     }
 
     public void GameOver()
     {
-        SceneManagerScript.instance.LoadScene(0);
+        Debug.Log("Game over");
+        LoadMainMenu();
     }
+
+    void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
 
     public void ExitGame()
     {
