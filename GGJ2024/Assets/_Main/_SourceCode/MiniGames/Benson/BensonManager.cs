@@ -36,11 +36,11 @@ public class BensonManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timer.text = string.Format("{0}:{1}", minutes, seconds);
-    }
+    }   
 
     public void Win()
     {
-        GameManager.instance.NextGame();
+        GameManager.instance.LoadNewLevel();
     }
 
     public void Lose()

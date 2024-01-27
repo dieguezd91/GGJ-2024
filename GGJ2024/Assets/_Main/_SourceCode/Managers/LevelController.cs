@@ -8,6 +8,5 @@ public class LevelController : MonoBehaviour
     
     void Start()
     {
-        GameManager.instance.lastGamePlayed = minigameID;    
     }
 }
