@@ -7,22 +7,23 @@ public class ButtonBehaviour : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float rotSpeed;
-    private RectTransform pos;
-    private Button button;
+    private Transform pos;
+    private Rigidbody2D rb;
     private Vector3 randomDir;
     private int randomRot;
 
     private void Awake()
     {
-        pos = GetComponent<RectTransform>();
-        button = GetComponent<Button>();
+        rb = GetComponent<Rigidbody2D>();
+        pos = GetComponent<Transform>();
         GetRandomDirection();
         GetRandomRotation();
+        rb.AddForce(randomDir * speed,ForceMode2D.Impulse);
     }
 
     private void Update()
     {
-        pos.localPosition += randomDir * speed * Time.deltaTime;
+        
     }
 
     public void GetRandomDirection()

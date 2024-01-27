@@ -14,8 +14,7 @@ public class Guess : MonoBehaviour
     [SerializeField] private Image silhouette;
     [SerializeField] private TMP_Text correct;
     [SerializeField] private TMP_Text incorrect;
-    [SerializeField] private Image[] buttonsText;
-    [SerializeField] private Button[] buttons;
+    [SerializeField] private CustomButton[] buttons;
 
     private GuessBase currentGuess;
     private int correctGuesses;
@@ -81,13 +80,14 @@ public class Guess : MonoBehaviour
         {
             if (buttons[i] == buttons[randomButton])
             {
-                buttons[i].onClick.AddListener(CorrectGuess);
-                buttonsText[i].sprite = currentGuess.CorrectAnswer;
+                buttons[i].OnMouseClick.AddListener(CorrectGuess);
+                buttons[i].SpriteRenderer.sprite = currentGuess.CorrectAnswer;
+ 
                 continue;
             }
 
-            buttons[i].onClick.AddListener(IncorrectGuess);
-            buttonsText[i].sprite= (Sprite)stack.Pop();
+            buttons[i].OnMouseClick.AddListener(IncorrectGuess);
+            buttons[i].SpriteRenderer.sprite = (Sprite)stack.Pop();
         }
     }
 
@@ -95,7 +95,7 @@ public class Guess : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            buttons[i].onClick.RemoveAllListeners();
+            buttons[i].OnMouseClick.RemoveAllListeners();
         }
     }
 }
