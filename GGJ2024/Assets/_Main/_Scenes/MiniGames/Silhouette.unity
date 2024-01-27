@@ -735,6 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotSpeed: 300
+  alphaChangeSpeed: 0.4
 --- !u!50 &1023314127
 Rigidbody2D:
   serializedVersion: 4
@@ -896,6 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotSpeed: 300
+  alphaChangeSpeed: 0.4
 --- !u!50 &1124932139
 Rigidbody2D:
   serializedVersion: 4
@@ -1113,6 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotSpeed: 300
+  alphaChangeSpeed: 0.4
 --- !u!50 &1293118695
 Rigidbody2D:
   serializedVersion: 4
@@ -1274,6 +1277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotSpeed: 300
+  alphaChangeSpeed: 0.4
 --- !u!50 &1310782800
 Rigidbody2D:
   serializedVersion: 4
