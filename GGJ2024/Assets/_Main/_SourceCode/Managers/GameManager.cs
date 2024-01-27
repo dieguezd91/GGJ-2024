@@ -5,15 +5,16 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     public int currentGame;
-    public int lastGamePlayed;
     private bool tutorial;
-    int currentRound;
+    public int currentRound;
+    public int points;
     public List<SceneAsset> array1;
     public List<SceneAsset> array2;
     [SerializeField] List<SceneAsset> games;
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadNewLevel()
-    {   
+    {
         if (currentGame == 4)         //En la ronda 1, los minijuegos se juegan en orden.
         {
             if (tutorial) tutorial = false;
@@ -73,9 +74,14 @@ public class GameManager : MonoBehaviour
         {
             currentGame++;
             if (tutorial) SceneManagerScript.instance.LoadScene(currentGame);
-            else SceneManager.LoadScene(array2[currentGame-1].name);
-            Debug.Log(currentGame);
+            else SceneManager.LoadScene(array2[currentGame - 1].name);
         }
+    }
+
+    public void AddPoints(int pointsToAdd)
+    {
+        points += pointsToAdd;
+        Debug.Log($"+{pointsToAdd} pts");
     }
 
     public void GameOver()
