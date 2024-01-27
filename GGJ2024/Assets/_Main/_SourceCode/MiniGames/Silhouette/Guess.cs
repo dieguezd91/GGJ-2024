@@ -9,8 +9,10 @@ public class Guess : MonoBehaviour
     private GuessBase[] _base;
     [SerializeField] private int maxCorrectGuesses;
     [SerializeField] private float timerBetweenGuesses;
+    [SerializeField] private float questionTimer;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
+    [SerializeField] private TMP_Text question;
     [SerializeField] private TMP_Text correct;
     [SerializeField] private TMP_Text incorrect;
     [SerializeField] private CustomButton[] buttons;
@@ -23,11 +25,12 @@ public class Guess : MonoBehaviour
     {
         _base = Resources.LoadAll<GuessBase>("");
         AssigningValues();
+        Invoke(nameof(RemoveQuestion), questionTimer);
     }
 
-    private void Update()
+    public void RemoveQuestion()
     {
-        
+        question.gameObject.SetActive(false);
     }
 
     public GuessBase GetRandomGuess()
