@@ -23,18 +23,18 @@ public class ButtonBehaviour : MonoBehaviour
 
     private void Update()
     {
-        
+        transform.Rotate(Vector3.forward, randomRot * rotSpeed * Time.deltaTime);
     }
 
     public void GetRandomDirection()
     { 
-        randomDir.x = Random.Range(0f, 1f);
-        randomDir.y = Random.Range(0f, 1f);
+        randomDir.x = Random.Range(0, 2);
+        randomDir.y = Random.Range(0, 2);
         randomDir.z = 0f;
     }
 
     public void GetRandomRotation()
     {
-        randomRot = Random.Range(-1, 2);
+        randomRot = Random.Range(-1, 2) * 2-1;
     }
 }

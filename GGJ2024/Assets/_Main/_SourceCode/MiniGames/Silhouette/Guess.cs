@@ -20,7 +20,7 @@ public class Guess : MonoBehaviour
     private int correctGuesses;
 
 
-    private void Awake()
+    private void Start()
     {
         _base = Resources.LoadAll<GuessBase>("");
         AssigningValues();
