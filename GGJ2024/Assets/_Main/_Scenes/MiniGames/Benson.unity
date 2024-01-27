@@ -593,7 +593,8 @@ MonoBehaviour:
   player1: {fileID: 884628690}
   player2: {fileID: 1388769208}
   currentCharacter: {fileID: 0}
-  objective: 2
+  objectiveMultiplier: 5
+  pointsForVictory: 10
 --- !u!4 &761803051
 Transform:
   m_ObjectHideFlags: 0
@@ -1041,7 +1042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: currentRound
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769372, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: m_Name

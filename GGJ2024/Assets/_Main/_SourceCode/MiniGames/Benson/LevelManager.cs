@@ -13,8 +13,10 @@ public class LevelManager : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public GameObject currentCharacter;
-    int points;
-    [SerializeField] int objective;
+    int coughtBalls;
+    int objective;
+    [SerializeField] int objectiveMultiplier;
+    [SerializeField] int pointsForVictory;
 
     private void Start()
     {
@@ -22,6 +24,8 @@ public class LevelManager : MonoBehaviour
         else Destroy(gameObject);
 
         currentCharacter = player1;
+
+        objective = GameManager.instance.currentRound * objectiveMultiplier;
     }
 
     private void Update()
@@ -41,20 +45,17 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) SwitchCharacter();
     }
 
-    public void AddPoints(int pointsToAdd)
-    {
-        points += pointsToAdd;
-        Debug.Log($"+{pointsToAdd}");
-    }
+    public void CatchBall() => coughtBalls++;
 
     bool EndGame()
     {
-        return points >= objective;
+        return coughtBalls >= objective;
     }
     
     private void Win()
     {
         GameManager.instance.LoadNewLevel();
+        GameManager.instance.AddPoints(pointsForVictory);
         Debug.Log("Win");
     }
 

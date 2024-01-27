@@ -5,7 +5,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] float fallSpeed;
-    [SerializeField] int points;
 
     private void Start()
     {
@@ -16,7 +15,7 @@ public class Ball : MonoBehaviour
 
     protected void Collided(bool withPlayer)
     {
-        if(withPlayer) LevelManager.instance.AddPoints(points);
+        if(withPlayer) LevelManager.instance.CatchBall();
         Destroy(gameObject);
     }
 }
