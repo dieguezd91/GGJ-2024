@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal: {fileID: 21300000, guid: a4ced07f270e9a24c99647f46daff93a, type: 3}
   silhouette: {fileID: 21300000, guid: 124a03a333eb5b545a56b268cfee748b, type: 3}
-  correctAnswer: {fileID: 21300000, guid: a4ced07f270e9a24c99647f46daff93a, type: 3}
   incorrectAnswers:
+  - {fileID: 21300000, guid: 2ce425f7bc61e00459f5bdf7f3c66044, type: 3}
   - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
-  - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
-  - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
+  - {fileID: 21300000, guid: 76969b9a6612ea7499b81bddccd8d1bd, type: 3}

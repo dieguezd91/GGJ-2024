@@ -950,7 +950,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCorrectGuesses: 4
   timerBetweenGuesses: 0.5
-  timerMinigame: 0
   normalImage: {fileID: 1459729509}
   silhouette: {fileID: 735820972}
   correct: {fileID: 1009806486}
@@ -1211,7 +1210,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a4ced07f270e9a24c99647f46daff93a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 186f22348e86a824bb5a3e726d4e0df2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1254,7 +1253,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.05, y: 6.63}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1603,7 +1602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 210.92}
+  m_AnchoredPosition: {x: 0, y: 309.7}
   m_SizeDelta: {x: 368.6016, y: 92.1504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581559070
@@ -1626,7 +1625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Que es eso?
+  m_text: Clickea la Image correcta
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1653,7 +1652,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.8
+  m_fontSize: 40.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

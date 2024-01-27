@@ -9,7 +9,6 @@ public class Guess : MonoBehaviour
     private GuessBase[] _base;
     [SerializeField] private int maxCorrectGuesses;
     [SerializeField] private float timerBetweenGuesses;
-    [SerializeField] private float timerMinigame;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
     [SerializeField] private TMP_Text correct;
