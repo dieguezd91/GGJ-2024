@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] List<SceneAsset> availableGames = new List<SceneAsset>();
     public int currentGame;
+    public int currentRound;
     public int lastGamePlayed;
     private bool tutorial;
-    int currentRound;
 
     private void Start()
     {

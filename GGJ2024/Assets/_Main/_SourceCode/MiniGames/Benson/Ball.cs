@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private float fallSpeed;
+    [SerializeField] float fallSpeed;
     //private float _lastGravityUpdate;
     //[SerializeField] private float velocityIncreaseValue;
     //[SerializeField] private BensonController bensonController;
@@ -13,6 +13,8 @@ public class Ball : MonoBehaviour
     {
         // bensonController = GetComponent<BensonController>();
         // _lastGravityUpdate = Time.time;
+
+        fallSpeed *= GameManager.instance.currentRound*0.75f;
     }
     
     private void Update()

@@ -25,6 +25,7 @@ public class BensonController : MonoBehaviour
         _middleReferencePoint = Instantiate(new GameObject(), new Vector2(transform.position.x - range/2, transform.position.y), transform.rotation).GetComponent<Transform>();
         _movingRight = 1;
         _lastBallSpawned = Time.time;
+        movementVelocity *= GameManager.instance.currentRound;
     }
 
     private void Update()
