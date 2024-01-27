@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &43264407 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2229584398883717167, guid: c13fd079947422b4b910891ee25382e8, type: 3}
-  m_PrefabInstance: {fileID: 1605562816}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &106543980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -593,14 +588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cc1ef375ebee84c8ecb133032db0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  benson: {fileID: 1616024180}
   remainingTime: 60
   timer: {fileID: 2066879905}
   player1: {fileID: 884628690}
   player2: {fileID: 1388769208}
   currentCharacter: {fileID: 0}
-  lastPosition: {x: 0, y: 0, z: 0}
-  currentPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &761803051
 Transform:
   m_ObjectHideFlags: 0
@@ -989,25 +981,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5369366591725592044, guid: c13fd079947422b4b910891ee25382e8, type: 3}
-      propertyPath: ballSpawnCd
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369366591725592044, guid: c13fd079947422b4b910891ee25382e8, type: 3}
-      propertyPath: ballSpawnPointRef
-      value: 
-      objectReference: {fileID: 43264407}
     - target: {fileID: 7983434712364347427, guid: c13fd079947422b4b910891ee25382e8, type: 3}
       propertyPath: m_Name
       value: BallsSpawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c13fd079947422b4b910891ee25382e8, type: 3}
---- !u!1 &1616024180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7983434712364347427, guid: c13fd079947422b4b910891ee25382e8, type: 3}
-  m_PrefabInstance: {fileID: 1605562816}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2059258519
 PrefabInstance:
   m_ObjectHideFlags: 0

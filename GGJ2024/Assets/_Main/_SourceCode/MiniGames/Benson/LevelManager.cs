@@ -8,14 +8,11 @@ using UnityEngine.Serialization;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
-    public GameObject benson;
     public float remainingTime;
     public TextMeshProUGUI timer;
     public GameObject player1;
     public GameObject player2;
     public GameObject currentCharacter;
-    public Vector3 lastPosition;
-    public Vector3 currentPosition;
 
 private void Start()
     {
@@ -45,8 +42,6 @@ private void Start()
         {
             SwitchCharacter();   
         }
-        
-        //currentPosition = currentCharacter.transform.position;
     }
 
     private void Win()
@@ -75,9 +70,5 @@ private void Start()
             player1.SetActive(true);
             currentCharacter = player1;
         }
-        
-        //currentPosition = currentCharacter.transform.position;
-    
-        //lastPosition = currentPosition;
     } 
 }    

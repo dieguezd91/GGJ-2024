@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Rigidbody2D rb;
-    float lastGravityUpdate;
-    [SerializeField] float velocityIncreaseValue;
+    [SerializeField] private float fallSpeed;
+    //private float _lastGravityUpdate;
+    //[SerializeField] private float velocityIncreaseValue;
+    //[SerializeField] private BensonController bensonController;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        lastGravityUpdate = Time.time;
+        // bensonController = GetComponent<BensonController>();
+        // _lastGravityUpdate = Time.time;
     }
-
+    
     private void Update()
     {
-        if (Time.time >= lastGravityUpdate + 1)
-        {
-            rb.gravityScale += .3f;
-            LevelManager.instance.benson.GetComponent<BensonController>().movementVelocity += velocityIncreaseValue;
-            if(LevelManager.instance.benson.GetComponent<BensonController>().ballSpawnCd >= 0.75f) 
-                LevelManager.instance.benson.GetComponent<BensonController>().ballSpawnCd -= 0.25f;
-            lastGravityUpdate = Time.time;
-        }
+        transform.Translate(Vector3.down * fallSpeed * Time.deltaTime);
+        // if (Time.time >= _lastGravityUpdate + 1)
+        // {
+        //     _rb.gravityScale += .3f;
+        //     bensonController.movementVelocity += velocityIncreaseValue;
+        //     if(bensonController.ballSpawnCd >= 0.75f) 
+        //         bensonController.ballSpawnCd -= 0.25f;
+        //     _lastGravityUpdate = Time.time;
+        // }
     }
 
     protected void Collided(bool withPlayer)

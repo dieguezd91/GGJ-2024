@@ -36,7 +36,6 @@ public class BensonController : MonoBehaviour
     private void Move()
     {
         _rb.velocity = new Vector2(_movingRight * movementVelocity, 0);
-
         _distance = transform.position.x - _middleReferencePoint.position.x;
         if (_distance <= 0) _movingRight = 1;
         else if (_distance >= range) _movingRight = -1;

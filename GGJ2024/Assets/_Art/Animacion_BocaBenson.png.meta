@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2b221d2f6346c2498a419b3fa82b85b
+guid: 7ff5b9dafa59582458ed9f19f967417a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Animacion_BocaBenson_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1348
+        height: 1395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eed8d098a4b224c8d497356574b113
+      internalID: 873874382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion_BocaBenson_1
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 1350
+        height: 1395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d88fd887f55fb45adabeb0bc0d3831
+      internalID: 1290096669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion_BocaBenson_2
+      rect:
+        serializedVersion: 2
+        x: 3329
+        y: 2
+        width: 1353
+        height: 1391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b328ebfa4eb0d44a896389b0449d42c
+      internalID: -621840168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion_BocaBenson_3
+      rect:
+        serializedVersion: 2
+        x: 4833
+        y: 2
+        width: 1354
+        height: 1391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331fd86df8611934f9c02059d12807b8
+      internalID: -1611285658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion_BocaBenson_4
+      rect:
+        serializedVersion: 2
+        x: 6376
+        y: 0
+        width: 1348
+        height: 1395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f487935c94f710459cd8e9c9148eb5f
+      internalID: -1656819211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +231,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Animacion_BocaBenson_1: 1290096669
+      Animacion_BocaBenson_2: -621840168
+      Animacion_BocaBenson_0: 873874382
+      Animacion_BocaBenson_4: -1656819211
+      Animacion_BocaBenson_3: -1611285658
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

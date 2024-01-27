@@ -80,8 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 1
   range: 8.5
-  ballSpawnpointRef: {fileID: 2229584398883717167}
-  ballSpawnCD: 2.5
+  ballSpawnPointRef: {fileID: 2229584398883717167}
+  ballSpawnCd: 2
   blueBallPrefab: {fileID: 221396552202451710, guid: ceb9ba2f5962e044dac4f9b69367a0dc, type: 3}
   orangeBallPrefab: {fileID: 221396552202451710, guid: ea4dd636954479e4f999fc46fcf7b5d3, type: 3}
 --- !u!50 &4057797508132739376
@@ -115,8 +115,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3564839978030246124}
   - component: {fileID: 7362533805682182524}
+  - component: {fileID: 430051699}
   m_Layer: 0
-  m_Name: Head
+  m_Name: Benson
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,14 +179,34 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c2b221d2f6346c2498a419b3fa82b85b, type: 3}
+  m_Sprite: {fileID: 873874382, guid: 7ff5b9dafa59582458ed9f19f967417a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.6328125, y: 2.7254868}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &430051699
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8863323119809248696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cbbc71a1e09b0342a592af63d609683, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
