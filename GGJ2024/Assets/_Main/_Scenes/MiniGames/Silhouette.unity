@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxCorrectGuesses: 4
-  timerBetweenGuesses: 0
+  timerBetweenGuesses: 0.5
   timerMinigame: 0
   normalImage: {fileID: 1459729509}
   silhouette: {fileID: 735820972}

@@ -26,6 +26,11 @@ public class Guess : MonoBehaviour
         AssigningValues();
     }
 
+    private void Update()
+    {
+        
+    }
+
     public GuessBase GetRandomGuess()
     {
         var random = Random.Range(0, _base.Length);
@@ -40,9 +45,14 @@ public class Guess : MonoBehaviour
         correct.gameObject.SetActive(true);
         correctGuesses++;
 
-        //Esperar unos segundos
+        Invoke(nameof(NextGuess), timerBetweenGuesses);
 
-        if(correctGuesses == maxCorrectGuesses)
+        
+    }
+
+    public void NextGuess()
+    {
+        if (correctGuesses == maxCorrectGuesses)
         {
             correctGuesses = 0;
             //pasar al proximo minijuego
