@@ -6,7 +6,6 @@ public class OrangeBall : Ball
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("OrangePlayer")) Collided(true);
-        else Collided(false);
+        Collided(col.gameObject.CompareTag("OrangeBall"));
     }
 }

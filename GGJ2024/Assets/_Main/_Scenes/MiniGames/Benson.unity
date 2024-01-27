@@ -885,8 +885,8 @@ MonoBehaviour:
   currentCharacter: {fileID: 0}
   objectiveMultiplier: 5
   pointsForVictory: 10
-  controlsScreen: {fileID: 2069660575}
-  controlsShowingTime: 1.5
+  controlsScreen: {fileID: 0}
+  controlsShowingTime: 0
 --- !u!4 &761803051
 Transform:
   m_ObjectHideFlags: 0
@@ -1274,6 +1274,26 @@ PrefabInstance:
     - target: {fileID: 2278428099595833851, guid: c13fd079947422b4b910891ee25382e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916565901601092548, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.688
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362533805682182524, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_Size.x
+      value: 12.240001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362533805682182524, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_Size.y
+      value: 12.476452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362533805682182524, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -647018201, guid: 1ec9777cdd9c0df42963b871365a84e2, type: 3}
+    - target: {fileID: 7362533805682182524, guid: c13fd079947422b4b910891ee25382e8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7983434712364347427, guid: c13fd079947422b4b910891ee25382e8, type: 3}
       propertyPath: m_Name

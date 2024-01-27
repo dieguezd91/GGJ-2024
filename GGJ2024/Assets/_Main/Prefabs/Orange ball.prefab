@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1775168349745963477}
   - component: {fileID: 2244918340139025534}
   - component: {fileID: 5072754590422195062}
+  - component: {fileID: -4849252207002354467}
   m_Layer: 0
   m_Name: Orange ball
   m_TagString: Untagged
@@ -115,4 +116,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 3
-  points: 2
+--- !u!50 &-4849252207002354467
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221396552202451710}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

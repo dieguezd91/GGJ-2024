@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] float fallSpeed;
+    [SerializeField] private float fallSpeed;
 
     private void Start()
     {
