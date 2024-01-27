@@ -17,6 +17,8 @@ public class LevelManager : MonoBehaviour
     int objective;
     [SerializeField] int objectiveMultiplier;
     [SerializeField] int pointsForVictory;
+    [SerializeField] GameObject controlsScreen;
+    [SerializeField] float controlsShowingTime;
 
     private void Start()
     {
@@ -24,8 +26,8 @@ public class LevelManager : MonoBehaviour
         else Destroy(gameObject);
 
         currentCharacter = player1;
-
         objective = GameManager.instance.currentRound * objectiveMultiplier;
+        StartCoroutine(ShowControls());
     }
 
     private void Update()
@@ -76,4 +78,10 @@ public class LevelManager : MonoBehaviour
             currentCharacter = player1;
         }
     } 
+
+    IEnumerator ShowControls()
+    {
+        controlsScreen.SetActive(true);
+        yield return new WaitForSeconds(controlsShowingTime);
+    }
 }    
