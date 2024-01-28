@@ -19,6 +19,7 @@ public class BensonController : MonoBehaviour
     [SerializeField] private GameObject blueBallPrefab;
     [SerializeField] private GameObject orangeBallPrefab;
 
+    private float timerStep = 3f;
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -32,6 +33,13 @@ public class BensonController : MonoBehaviour
     {
         Move();
         AttemptToSpawnBall();
+        
+        timerStep -= Time.deltaTime;
+        if (timerStep <= 0f)
+        {
+            AudioManager.AudioInstance.PlaySFX("bensonsus");
+            timerStep = 3f;
+        }
     }
 
     private void Move()
@@ -47,6 +55,7 @@ public class BensonController : MonoBehaviour
         if (Time.time >= _lastBallSpawned + ballSpawnCd)
         {
             SpawnBall();
+            AudioManager.AudioInstance.PlaySFX("spamball");
         }
     }
 

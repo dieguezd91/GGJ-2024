@@ -49,7 +49,11 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) SwitchCharacter();
     }
 
-    public void CatchBall() => _caughtBalls++;
+    public void CatchBall()
+    {
+        _caughtBalls++;
+        AudioManager.AudioInstance.PlaySFX("catchBall");
+    }
 
     bool EndGame()
     {
