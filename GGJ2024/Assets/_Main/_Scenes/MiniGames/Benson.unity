@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cc1ef375ebee84c8ecb133032db0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingTime: 60
+  remainingTime: 15
   timer: {fileID: 2066879905}
   objectiveMultiplier: 5
   pointsForVictory: 10
