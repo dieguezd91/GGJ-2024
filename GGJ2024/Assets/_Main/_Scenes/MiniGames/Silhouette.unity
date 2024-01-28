@@ -1371,6 +1371,11 @@ MonoBehaviour:
   - {fileID: 1293118690}
   - {fileID: 1023314122}
   - {fileID: 1124932134}
+  buttonsSprites:
+  - {fileID: 1310782796}
+  - {fileID: 1293118691}
+  - {fileID: 1023314123}
+  - {fileID: 1124932135}
 --- !u!4 &1135256552
 Transform:
   m_ObjectHideFlags: 0

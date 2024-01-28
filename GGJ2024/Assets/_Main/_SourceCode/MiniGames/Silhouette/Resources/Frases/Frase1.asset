@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f800047cddbfe4193c35fd50efdc53, type: 3}
   m_Name: Frase1
   m_EditorClassIdentifier: 
-  incompletePhrase: A esta hora salen
+  memeImage: {fileID: 21300000, guid: fa1a4070e2f58a641b819e0434682d91, type: 3}
   originalPhrase: A esta hora salen duendes
-  writeCorrect: duendes
-  incorrectWords: []
+  incompletePhrase: A esta hora salen
+  correctWord: Duendes
+  incorrectWords:
+  - Patos
+  - Perros
+  - Gatos

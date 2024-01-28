@@ -21,15 +21,16 @@ public class Guess : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text minigameTimerText;
     [SerializeField] private CustomButton[] buttons;
+    [SerializeField] private SpriteRenderer[] buttonsSprites;
 
     private GuessBase currentGuess;
     private int correctGuesses;
-    private float provisionalScore;
+    private float sillouetteScore;
 
 
     private void Start()
     {
-        _base = Resources.LoadAll<GuessBase>("");
+        _base = Resources.LoadAll<GuessBase>("Siluetas");
         AssigningValues();
         Invoke(nameof(RemoveQuestion), questionTimer);
     }
@@ -59,17 +60,29 @@ public class Guess : MonoBehaviour
     {
         ClearListeners();
         //Reproducir sonido de acierto
-        provisionalScore += scoreIncrease;
-        scoreText.text = provisionalScore.ToString();
+        sillouetteScore += scoreIncrease;
+        scoreText.text = sillouetteScore.ToString();
         normalImage.gameObject.SetActive(true);
         silhouette.gameObject.SetActive(false);
         correct.gameObject.SetActive(true);
         DisableButtons();
-        //correctGuesses++;
+        correctGuesses++;
 
         Invoke(nameof(NextGuess), timerBetweenGuesses);
 
         
+    }
+    public void IncorrectGuess()
+    {
+        ClearListeners();
+        //Reproducir sonido de incorrecto
+        normalImage.gameObject.SetActive(true);
+        silhouette.gameObject.SetActive(false);
+        incorrect.gameObject.SetActive(true);
+        DisableButtons();
+
+        Invoke(nameof(NextGuess), incorrectTimer);
+
     }
 
     public void NextGuess()
@@ -94,19 +107,7 @@ public class Guess : MonoBehaviour
         AssigningValues();
     }
 
-    public void IncorrectGuess()
-    {
-        ClearListeners();
-        //Reproducir sonido de incorrecto
-        normalImage.gameObject.SetActive(true);
-        silhouette.gameObject.SetActive(false);
-        incorrect.gameObject.SetActive(true);
-        DisableButtons();
-
-        Invoke(nameof(NextGuess), incorrectTimer);
-
-        
-    }
+    
 
     public void DisableButtons()
     {
@@ -139,13 +140,15 @@ public class Guess : MonoBehaviour
             if (buttons[i] == buttons[randomButton])
             {
                 buttons[i].OnMouseClick.AddListener(CorrectGuess);
-                buttons[i].SpriteRenderer.sprite = currentGuess.CorrectAnswer;
+                buttonsSprites[i].sprite = currentGuess.CorrectAnswer;
+                //buttons[i].SpriteRenderer.sprite = currentGuess.CorrectAnswer;
  
                 continue;
             }
 
             buttons[i].OnMouseClick.AddListener(IncorrectGuess);
-            buttons[i].SpriteRenderer.sprite = (Sprite)stack.Pop();
+            buttonsSprites[i].sprite = (Sprite)stack.Pop();
+            //buttons[i].SpriteRenderer.sprite = (Sprite)stack.Pop();
         }
     }
 
