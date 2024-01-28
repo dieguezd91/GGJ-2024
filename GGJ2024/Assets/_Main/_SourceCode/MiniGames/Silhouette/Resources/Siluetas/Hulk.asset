@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 216bb5be84cb4bf4c93f32bbeef96621, type: 3}
-  m_Name: Vaca
+  m_Name: Hulk
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: a4ced07f270e9a24c99647f46daff93a, type: 3}
-  silhouette: {fileID: 21300000, guid: 124a03a333eb5b545a56b268cfee748b, type: 3}
+  normal: {fileID: 21300000, guid: a2f4463efbe2af84e8eaf49ad2b8d3a1, type: 3}
+  silhouette: {fileID: 21300000, guid: b42ed31db8254d74f809cda2e52bbde2, type: 3}
   incorrectAnswers:
-  - {fileID: 21300000, guid: 2ce425f7bc61e00459f5bdf7f3c66044, type: 3}
-  - {fileID: 21300000, guid: a7914ed1260f3ae49ab0407670cfd826, type: 3}
-  - {fileID: 21300000, guid: 76969b9a6612ea7499b81bddccd8d1bd, type: 3}
+  - {fileID: 21300000, guid: ef2eee773fe0eab45b039403d40e5c57, type: 3}
+  - {fileID: 21300000, guid: cfc1f032a6a28a04f9590b8a3148f4c3, type: 3}
+  - {fileID: 21300000, guid: 21e806fabcd1dc14ba93e1bd481ef68b, type: 3}
