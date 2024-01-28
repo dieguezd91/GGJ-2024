@@ -15,7 +15,7 @@ public class FindTheMemeManager : MonoBehaviour
     }
     void Spawn()
     {
-        var randomSet = _slotPrefabs.OrderBy(s => Random.value).Take(4).ToList();
+        var randomSet = _slotPrefabs.OrderBy(s => Random.value).Take(8).ToList();
 
         for (int i = 0; i < randomSet.Count; i++)
         {

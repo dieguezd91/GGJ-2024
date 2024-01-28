@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155821687209404031, guid: c171d26da7185204c8b7d7d9bdaaf6b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155821687209404031, guid: c171d26da7185204c8b7d7d9bdaaf6b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155821687209404031, guid: c171d26da7185204c8b7d7d9bdaaf6b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -57,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a2e272915e4b95846afd028893006c97, type: 3}
     - target: {fileID: 7812942818286819186, guid: c171d26da7185204c8b7d7d9bdaaf6b2, type: 3}
       propertyPath: m_Name
-      value: sonic slot 1
+      value: Slot 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c171d26da7185204c8b7d7d9bdaaf6b2, type: 3}
