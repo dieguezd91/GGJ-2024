@@ -13,12 +13,13 @@ public class LevelManager : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public GameObject currentCharacter;
-    int coughtBalls;
-    int objective;
-    [SerializeField] int objectiveMultiplier;
-    [SerializeField] int pointsForVictory;
-    [SerializeField] GameObject controlsScreen;
-    [SerializeField] float controlsShowingTime;
+    private int _caughtBalls;
+    private int _objective;
+    [SerializeField] private int objectiveMultiplier;
+    [SerializeField] private int pointsForVictory;
+    [SerializeField] private GameObject controlsScreen;
+    [SerializeField] private float controlsShowingTime;
+    [SerializeField] private TextMeshProUGUI score;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class LevelManager : MonoBehaviour
         else Destroy(gameObject);
 
         currentCharacter = player1;
-        objective = GameManager.instance.currentRound * objectiveMultiplier;
+        _objective = GameManager.instance.currentRound * objectiveMultiplier;
         StartCoroutine(ShowControls());
     }
 
@@ -43,15 +44,16 @@ public class LevelManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timer.text = $"{minutes}:{seconds}";
+        score.text = _caughtBalls.ToString();
 
         if (Input.GetKeyDown(KeyCode.Q)) SwitchCharacter();
     }
 
-    public void CatchBall() => coughtBalls++;
+    public void CatchBall() => _caughtBalls++;
 
     bool EndGame()
     {
-        return coughtBalls >= objective;
+        return _caughtBalls >= _objective;
     }
     
     private void Win()
