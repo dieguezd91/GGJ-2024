@@ -28,25 +28,25 @@ public class PlayerController : MonoBehaviour
     {
         
         Move();
+        Flip();
         timerStep -= Time.deltaTime;
         if (horizontalInput !=0f && timerStep <= 0.0f)
         {
             AudioManager.AudioInstance.PlaySFX("walk");
             timerStep = 0.3f;
+            
+            if(currentCharacter == rigby)
+                _animator.SetBool("WalkRigby", true);
+            else if(currentCharacter == mordecai)
+                _animator.SetBool("WalkMordecai", true);
         }
-
-        if (horizontalInput == 0)
+        
+        if(horizontalInput == 0)
         {
-            if (currentCharacter == rigby)
-            {
+            if(currentCharacter == rigby)
                 _animator.SetBool("WalkRigby", false);
-                _animator.SetBool("IdleRigby", true);
-            }
-            else if (currentCharacter == mordecai)
-            {
+            else if(currentCharacter == mordecai)
                 _animator.SetBool("WalkMordecai", false);
-                _animator.SetBool("IdleMordecai", true);
-            }
         }
         
         if (Input.GetKeyDown(KeyCode.Q)) SwitchCharacter();
@@ -56,12 +56,6 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        
-        if(currentCharacter == rigby)
-            _animator.SetBool("WalkRigby", true);
-        else if(currentCharacter == mordecai)
-            _animator.SetBool("WalkMordecai", true);
-
         
         if (transform.position.x < -xLimit)
             transform.position = new Vector3(-xLimit, transform.position.y, transform.position.z);
@@ -85,5 +79,13 @@ public class PlayerController : MonoBehaviour
             _animator = GetComponentInChildren<Animator>();
             currentCharacter = rigby;
         }
-    } 
+    }
+
+    private void Flip()
+    {
+        if (horizontalInput < 0) 
+            transform.localScale = new Vector3(-1, 1,1);
+        else
+            transform.localScale = new Vector3(1, 1,1);
+    }
 }

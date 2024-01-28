@@ -530,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   xLimit: 8.5
-  speed: 10
+  speed: 5
   rigby: {fileID: 884628690}
   mordecai: {fileID: 1388769208}
   currentCharacter: {fileID: 0}
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cc1ef375ebee84c8ecb133032db0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingTime: 10
+  remainingTime: 60
   timer: {fileID: 2066879905}
   objectiveMultiplier: 5
   pointsForVictory: 10
