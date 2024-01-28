@@ -6,6 +6,14 @@ public class BlueBall : Ball
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Collided(col.gameObject.CompareTag("Mordecai"));
+        if(col.gameObject.CompareTag("Mordecai"))
+           Collided(true);
+        else 
+        {
+            if (col.gameObject.CompareTag("Rigby"))
+                AudioManager.AudioInstance.PlaySFX("Escupir_1");
+            Collided(false);
+        }
+        
     }
 }
