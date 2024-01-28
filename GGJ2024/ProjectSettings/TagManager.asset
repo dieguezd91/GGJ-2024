@@ -15,8 +15,8 @@ TagManager:
   - UI
   - Ground
   - Player
-  - Draggeable
-  - NonDraggeable
+  - Draggable
+  - NonDraggable
   - 
   - 
   - 
