@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2229584398883717167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.131, z: 0}
+  m_LocalPosition: {x: 0, y: -0.688, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ MonoBehaviour:
   movementVelocity: 1
   range: 8.5
   ballSpawnPointRef: {fileID: 2229584398883717167}
-  ballSpawnCd: 2
+  ballSpawnCd: 1.5
   blueBallPrefab: {fileID: 221396552202451710, guid: ceb9ba2f5962e044dac4f9b69367a0dc, type: 3}
   orangeBallPrefab: {fileID: 221396552202451710, guid: ea4dd636954479e4f999fc46fcf7b5d3, type: 3}
 --- !u!50 &4057797508132739376
@@ -179,12 +179,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 873874382, guid: 7ff5b9dafa59582458ed9f19f967417a, type: 3}
+  m_Sprite: {fileID: -647018201, guid: 1ec9777cdd9c0df42963b871365a84e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.6328125, y: 2.7254868}
+  m_Size: {x: 12.240001, y: 12.476452}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
