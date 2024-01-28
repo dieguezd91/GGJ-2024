@@ -132,16 +132,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2482251442165569674, guid: e7b5d1b879665f840b3e550303244759, type: 3}
       propertyPath: m_Name
-      value: Player1
+      value: Rigby
       objectReference: {fileID: 0}
-    - target: {fileID: 2482251442165569675, guid: e7b5d1b879665f840b3e550303244759, type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 884628690}
-    - target: {fileID: 2482251442165569675, guid: e7b5d1b879665f840b3e550303244759, type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 1388769208}
+    - target: {fileID: 2482251442165569674, guid: e7b5d1b879665f840b3e550303244759, type: 3}
+      propertyPath: m_TagString
+      value: Rigby
+      objectReference: {fileID: 0}
     - target: {fileID: 2482251442165569782, guid: e7b5d1b879665f840b3e550303244759, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -186,8 +182,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2482251442165569675, guid: e7b5d1b879665f840b3e550303244759, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b5d1b879665f840b3e550303244759, type: 3}
 --- !u!1 &283074639
 GameObject:
@@ -536,6 +531,9 @@ MonoBehaviour:
   horizontalInput: 0
   xLimit: 8.5
   speed: 10
+  rigby: {fileID: 884628690}
+  mordecai: {fileID: 1388769208}
+  currentCharacter: {fileID: 0}
 --- !u!4 &418345946
 Transform:
   m_ObjectHideFlags: 0
@@ -881,9 +879,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remainingTime: 10
   timer: {fileID: 2066879905}
-  player1: {fileID: 884628690}
-  player2: {fileID: 1388769208}
-  currentCharacter: {fileID: 0}
   objectiveMultiplier: 5
   pointsForVictory: 10
   controlsScreen: {fileID: 0}
@@ -911,17 +906,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 418345946}
     m_Modifications:
-    - target: {fileID: 6297017461751675691, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 884628690}
-    - target: {fileID: 6297017461751675691, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 1388769208}
     - target: {fileID: 7518488927208651504, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
       propertyPath: m_Name
-      value: Player2
+      value: Mordecai
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518488927208651504, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
+      propertyPath: m_TagString
+      value: Mordecai
       objectReference: {fileID: 0}
     - target: {fileID: 7518488927208651507, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
       propertyPath: m_RootOrder
@@ -967,8 +958,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6297017461751675691, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1034a38cb23513c408ecb130deaa9f3a, type: 3}
 --- !u!1 &884628690 stripped
 GameObject:
@@ -1168,7 +1158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
       propertyPath: sfxSounds.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
       propertyPath: musicSounds.Array.size
@@ -1205,6 +1195,14 @@ PrefabInstance:
     - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
       propertyPath: sfxSounds.Array.data[3].name
       value: catchBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c22f63f1782a974e99b112625c068aa, type: 3}
+    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
+      propertyPath: sfxSounds.Array.data[4].name
+      value: Escupir_1
       objectReference: {fileID: 0}
     - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
       propertyPath: musicSounds.Array.data[0].clip

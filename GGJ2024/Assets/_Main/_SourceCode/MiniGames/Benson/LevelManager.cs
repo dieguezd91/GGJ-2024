@@ -10,9 +10,6 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
     public float remainingTime;
     public TextMeshProUGUI timer;
-    public GameObject player1;
-    public GameObject player2;
-    public GameObject currentCharacter;
     private int _caughtBalls;
     private int _objective;
     [SerializeField] private int objectiveMultiplier;
@@ -25,8 +22,7 @@ public class LevelManager : MonoBehaviour
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
-
-        currentCharacter = player1;
+        
         _objective = GameManager.instance.currentRound * objectiveMultiplier;
         StartCoroutine(ShowControls());
     }
@@ -45,8 +41,6 @@ public class LevelManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timer.text = $"{minutes}:{seconds}";
         score.text = _caughtBalls.ToString();
-
-        if (Input.GetKeyDown(KeyCode.Q)) SwitchCharacter();
     }
 
     public void CatchBall()
@@ -69,21 +63,7 @@ public class LevelManager : MonoBehaviour
 
     public void Lose() => GameManager.instance.GameOver();
 
-    private void SwitchCharacter()
-    {
-        if(currentCharacter == player1)
-        {
-            player1.SetActive(false);
-            player2.SetActive(true);
-            currentCharacter = player2;
-        }
-        else if (currentCharacter == player2)
-        {
-            player2.SetActive(false);
-            player1.SetActive(true);
-            currentCharacter = player1;
-        }
-    } 
+
 
     IEnumerator ShowControls()
     {

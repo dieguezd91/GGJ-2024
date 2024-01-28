@@ -6,6 +6,6 @@ public class BlueBall : Ball
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Collided(col.gameObject.CompareTag("BluePlayer"));
+        Collided(col.gameObject.CompareTag("Mordecai"));
     }
 }
