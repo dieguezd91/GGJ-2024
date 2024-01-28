@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Scripting;
 using UnityEngine.Serialization;
 
 public class LevelManager : MonoBehaviour
@@ -11,19 +12,28 @@ public class LevelManager : MonoBehaviour
     public float remainingTime;
     public TextMeshProUGUI timer;
     private int _caughtBalls;
-    private int _objective;
-    [SerializeField] private int objectiveMultiplier;
+    private float _objective;
     [SerializeField] private int pointsForVictory;
     [SerializeField] private GameObject controlsScreen;
     [SerializeField] private float controlsShowingTime;
     [SerializeField] private TextMeshProUGUI score;
+    public DifficultyValuesScriptableObject difficultyValues;
+    [SerializeField] GameObject ballSpawner;
 
     private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
-        
-        _objective = GameManager.instance.currentRound * objectiveMultiplier;
+
+        foreach (DifficultyValuesScriptableObject values in GameManager.instance.minigamesDifficultyValues)
+            if (values.minigameName == "Benson") difficultyValues = values;
+
+        foreach (MultipleValueVariable val in difficultyValues.variables)
+            if (val.variableName == "objective") _objective = val.value[GameManager.instance.currentRound - 1];
+
+        foreach (MultipleValueVariable val in difficultyValues.variables)
+            if (val.variableName == "movementVelocity") ballSpawner.GetComponent<BensonController>().movementVelocity = val.value[GameManager.instance.currentRound - 1];
+
         StartCoroutine(ShowControls());
     }
 
@@ -69,6 +79,6 @@ public class LevelManager : MonoBehaviour
     {
         controlsScreen.SetActive(true);
         yield return new WaitForSeconds(controlsShowingTime);
-        controlsScreen.SetActive(true);
+        controlsScreen.SetActive(false);
     }
 }    

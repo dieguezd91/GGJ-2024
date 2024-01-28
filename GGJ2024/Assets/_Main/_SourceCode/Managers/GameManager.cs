@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     public List<SceneAsset> array1;
     public List<SceneAsset> array2;
     [SerializeField] private List<SceneAsset> games;
+    public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
 
     private void Start()
     {
