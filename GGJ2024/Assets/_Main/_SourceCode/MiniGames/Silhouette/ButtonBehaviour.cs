@@ -21,10 +21,15 @@ public class ButtonBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         pos = GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
+    }
+
+    private void OnEnable()
+    {
         GetRandomDirection();
         GetRandomRotation();
         GetRandomAlpha();
-        rb.AddForce(randomDir * speed,ForceMode2D.Impulse);
+        rb.AddForce(randomDir * speed, ForceMode2D.Impulse);
     }
 
     private void Update()
