@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class BensonController : MonoBehaviour
 {
     private Rigidbody2D _rb;
+    Animator _animator;
     private Transform _middleReferencePoint;
     private int _movingRight;
     public float movementVelocity;
@@ -26,6 +27,7 @@ public class BensonController : MonoBehaviour
         _middleReferencePoint = Instantiate(new GameObject(), new Vector2(transform.position.x - range/2, transform.position.y), transform.rotation).GetComponent<Transform>();
         _movingRight = 1;
         _lastBallSpawned = Time.time;
+        _animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()

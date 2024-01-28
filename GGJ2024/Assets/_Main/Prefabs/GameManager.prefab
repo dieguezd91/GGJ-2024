@@ -49,9 +49,13 @@ MonoBehaviour:
   points: 0
   array1: []
   array2: []
-  games: []
+  games:
+  - {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+  - {fileID: 102900000, guid: fc0a9b3c0b7223f4fb6617a7871fe205, type: 3}
+  - {fileID: 102900000, guid: c2e09ae2afef9ba499708f1b0db2a202, type: 3}
+  - {fileID: 102900000, guid: 964011861b97e2e4eb7156de9f5f5660, type: 3}
   minigamesDifficultyValues:
   - {fileID: 11400000, guid: 7b23d76161c7b36429eb859b75fab281, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7b23d76161c7b36429eb859b75fab281, type: 2}
+  - {fileID: 11400000, guid: 7b23d76161c7b36429eb859b75fab281, type: 2}
+  - {fileID: 11400000, guid: 7b23d76161c7b36429eb859b75fab281, type: 2}

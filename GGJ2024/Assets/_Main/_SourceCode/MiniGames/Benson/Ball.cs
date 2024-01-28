@@ -8,8 +8,6 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        fallSpeed = LevelManager.instance.difficultyValues.variables[1].value[GameManager.instance.currentRound - 1];
-
         foreach (MultipleValueVariable val in LevelManager.instance.difficultyValues.variables)
             if (val.variableName == "fallSpeed") fallSpeed = val.value[GameManager.instance.currentRound - 1];
     }

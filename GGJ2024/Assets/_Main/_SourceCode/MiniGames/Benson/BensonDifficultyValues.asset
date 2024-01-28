@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BensonDifficultyValues
   m_EditorClassIdentifier: 
   minigameName: Benson
-  values:
+  variables:
   - variableName: movementVelocity
     value:
     - 1
