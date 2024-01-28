@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7f800047cddbfe4193c35fd50efdc53, type: 3}
-  m_Name: JoderQueRico
+  m_Name: Frase1
   m_EditorClassIdentifier: 
-  chooseCorrect: 
-  choosePhrase: 
-  incorrectWord: []
+  incompletePhrase: A esta hora salen
+  originalPhrase: A esta hora salen duendes
+  writeCorrect: duendes
+  incorrectWords: []
