@@ -67,8 +67,16 @@ public class PutTheMemeManager : MonoBehaviour
     {
         if(timer > 15)
         {
+            GameManager.instance.LoadNewLevel();
+
+            Win();
             //GAMEMANAGER PASAR A SIGUIENTE ESCENA
         }
+    }
+    private void Win()
+    {     
+        GameManager.instance.AddPoints(currentPoints);
+        Debug.Log("Win");
     }
     public void CleanScreen()
     {

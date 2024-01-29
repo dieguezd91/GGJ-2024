@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8679245, g: 0.74019223, b: 0.74019223, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -898,6 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50614efada02ce4283f894f1475f066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNumber: 0
 --- !u!212 &1023314123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1060,6 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50614efada02ce4283f894f1475f066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNumber: 0
 --- !u!212 &1124932135
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1501,6 +1503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50614efada02ce4283f894f1475f066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNumber: 0
 --- !u!212 &1293118691
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1663,6 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50614efada02ce4283f894f1475f066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNumber: 0
 --- !u!212 &1310782796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2447,12 +2451,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: c8b7d86b76895d54bab92a6e9a7072ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cd2c27dc190871449343aebe2be1d7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 80.41281, y: 45.35}
+  m_Size: {x: 80.23, y: 45.442776}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
