@@ -5,8 +5,8 @@ public class SceneManagerScript : MonoBehaviour
 {
     public static SceneManagerScript instance;
     public int scene;
-    
-    void Start()
+
+    private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);

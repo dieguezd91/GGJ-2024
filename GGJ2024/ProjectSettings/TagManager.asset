@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - Player
+  - Rigby
+  - Mordecai
   layers:
   - Default
   - TransparentFX
@@ -42,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Benson
+    uniqueID: 2342949999
     locked: 0

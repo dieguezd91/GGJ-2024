@@ -4,9 +4,5 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField] int minigameID;
-    
-    void Start()
-    {
-    }
+
 }

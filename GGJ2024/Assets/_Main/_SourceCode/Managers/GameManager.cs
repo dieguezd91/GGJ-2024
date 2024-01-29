@@ -6,25 +6,27 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     public int currentGame;
-    private bool tutorial;
+    private bool _tutorial;
     public int currentRound;
     public int points;
     public List<SceneAsset> array1;
     public List<SceneAsset> array2;
-    [SerializeField] List<SceneAsset> games;
+    [SerializeField] private List<SceneAsset> games;
+    public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
 
     private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        tutorial = true;
+        _tutorial = true;
     }
 
     private void Update()
@@ -67,13 +69,13 @@ public class GameManager : MonoBehaviour
     {
         if (currentGame == 4)         //En la ronda 1, los minijuegos se juegan en orden.
         {
-            if (tutorial) tutorial = false;
+            if (_tutorial) _tutorial = false;
             SetNewRound();
         }
         else
         {
             currentGame++;
-            if (tutorial) SceneManagerScript.instance.LoadScene(currentGame);
+            if (_tutorial) SceneManagerScript.instance.LoadScene(currentGame);
             else SceneManager.LoadScene(array2[currentGame - 1].name);
         }
     }
