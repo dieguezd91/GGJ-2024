@@ -1436,22 +1436,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: array1.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: array1.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: array1.Array.data[2]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
-      propertyPath: array1.Array.data[3]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: currentRound
       value: 1
       objectReference: {fileID: 0}
@@ -1472,9 +1456,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: 964011861b97e2e4eb7156de9f5f5660, type: 3}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: array1.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: array1.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: array1.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: array1.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: availableGames.Array.data[4]
       value: 
       objectReference: {fileID: 102900000, guid: 964011861b97e2e4eb7156de9f5f5660, type: 3}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: minigamesDifficultyValues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: minigamesDifficultyValues.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b23d76161c7b36429eb859b75fab281, type: 2}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: minigamesDifficultyValues.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: e944b42e56ba74d48aa8b8bdee7ef328, type: 2}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: minigamesDifficultyValues.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: bfb47f11b255eaf47bbfc5b0c51dfcd9, type: 2}
     - target: {fileID: 3486234062740769372, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: m_Name
       value: GameManager
