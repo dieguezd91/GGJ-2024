@@ -13,6 +13,7 @@ public class PutTheMemeManager : MonoBehaviour
     public float timer, gameDuration;
     public int memesToSpawn;
     public int counter, currentPoints;
+    public int maxObjective;
 
     public List<MemeSlot> randomSet;
     Meme spawnedPiece;
@@ -67,17 +68,16 @@ public class PutTheMemeManager : MonoBehaviour
     {
         if(timer > 15)
         {
+            if (currentPoints < maxObjective) 
+            {
+                //restar vida
+            }
+       
+            GameManager.instance.AddPoints(currentPoints);
             GameManager.instance.LoadNewLevel();
-
-            Win();
-            //GAMEMANAGER PASAR A SIGUIENTE ESCENA
         }
     }
-    private void Win()
-    {     
-        GameManager.instance.AddPoints(currentPoints);
-        Debug.Log("Win");
-    }
+
     public void CleanScreen()
     {
         if(counter == randomSet.Count)

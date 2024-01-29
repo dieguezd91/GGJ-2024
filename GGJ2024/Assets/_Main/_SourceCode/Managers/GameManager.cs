@@ -38,33 +38,42 @@ public class GameManager : MonoBehaviour
             Resume();
     }
 
-    private void Randomize()
-    {
-        foreach (Scene i in games) array1.Add(i);
+    //private void Randomize()
+    //{
+    //    foreach (Scene i in games) array1.Add(i);
 
-        array2.Clear();
-        int b = 4; ///HARCORDIE PORQUE EL VALOR DE ESTA VARIABLE ERA UNA LISTA DE ESCENAS.COUNT
-        for (int n = 0; n < b; n++)
+    //    array2.Clear();
+    //    int b = 4; ///HARCORDIE PORQUE EL VALOR DE ESTA VARIABLE ERA UNA LISTA DE ESCENAS.COUNT
+    //    for (int n = 0; n < b; n++)
+    //    {
+    //        int a = Random.Range(0, array1.Count);
+    //        array2.Add(array1[a]);
+    //       // array1.RemoveAt(a);
+    //    }
+    //}
+    private void Reshuffle()
+    {
+        for (int t = 0; t < games.Count; t++)
         {
-            int a = Random.Range(0, array1.Count);
-            array2.Add(array1[a]);
-            array1.RemoveAt(a);
+            var tmp = games[t];
+            int r = Random.Range(t, games.Count);
+            games[t] = games[r];
+            games[r] = tmp;
         }
     }
-
     void SetNewRound()
     {
         currentGame = 0;
         if (currentRound == 3)
         {
             currentRound = 0;
-            Randomize();
+            Reshuffle();
             LoadMainMenu();
         }
         else
         {
             currentRound++;
-            Randomize();
+            Reshuffle();
             LoadNewLevel();
         }
     }
