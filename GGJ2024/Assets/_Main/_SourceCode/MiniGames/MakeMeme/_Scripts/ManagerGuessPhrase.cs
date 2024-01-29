@@ -18,7 +18,7 @@ public class ManagerGuessPhrase : MonoBehaviour
     [SerializeField] private TMP_Text correct;
     [SerializeField] private TMP_Text incorrect;
     [SerializeField] private TMP_Text incompletePhrase;
-    [SerializeField] private Image memeImage;
+    [SerializeField] private SpriteRenderer memeImage;
     [SerializeField] private CustomButton[] buttons;
     [SerializeField] private TMP_Text[] buttonsText;
     private PhraseData[] phraseData;
