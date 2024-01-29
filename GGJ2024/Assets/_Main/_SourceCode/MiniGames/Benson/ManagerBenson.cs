@@ -1,14 +1,9 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Scripting;
-using UnityEngine.Serialization;
-
-public class LevelManager : MonoBehaviour
+public class ManagerBenson : MonoBehaviour
 {
-    public static LevelManager instance;
+    public static ManagerBenson instance;
     public float remainingTime;
     public TextMeshProUGUI timer;
     private int _caughtBalls;
@@ -40,7 +35,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         if (remainingTime > 0) remainingTime -= Time.deltaTime;
-        
+
         if (remainingTime <= 0)
         {
             if (EndGame()) Win();
@@ -63,7 +58,7 @@ public class LevelManager : MonoBehaviour
     {
         return _caughtBalls >= _objective;
     }
-    
+
     private void Win()
     {
         GameManager.instance.LoadNewLevel();
@@ -81,4 +76,4 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(controlsShowingTime);
         controlsScreen.SetActive(false);
     }
-}    
+}

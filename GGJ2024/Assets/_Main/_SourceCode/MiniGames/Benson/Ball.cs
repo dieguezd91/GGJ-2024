@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -8,7 +6,7 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        foreach (MultipleValueVariable val in LevelManager.instance.difficultyValues.variables)
+        foreach (MultipleValueVariable val in ManagerBenson.instance.difficultyValues.variables)
             if (val.variableName == "fallSpeed") fallSpeed = val.value[GameManager.instance.currentRound - 1];
     }
     
@@ -16,7 +14,7 @@ public class Ball : MonoBehaviour
 
     protected void Collided(bool withPlayer)
     {
-        if(withPlayer) LevelManager.instance.CatchBall();
+        if(withPlayer) ManagerBenson.instance.CatchBall();
         Destroy(gameObject);
     }
 }

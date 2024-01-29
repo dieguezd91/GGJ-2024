@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelManager : MonoBehaviour
+public class ManagerGuessPhrase : MonoBehaviour
 {
     [SerializeField] private float scoreIncrease;
     [SerializeField] private float minigameTimer;
