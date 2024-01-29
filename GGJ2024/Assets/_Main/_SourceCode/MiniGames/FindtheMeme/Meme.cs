@@ -30,6 +30,7 @@ public class Meme : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if (GameManager.instance.isPaused == true) return;
         _dragging = true;
         AudioManager.AudioInstance.PlaySFX("PickUp");
         //_source.PlayOneShot(_pickUpClip);
@@ -38,7 +39,8 @@ public class Meme : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(Vector2.Distance(transform.position, _slot.transform.position) < 1)
+        if (GameManager.instance.isPaused == true) return;
+        if (Vector2.Distance(transform.position, _slot.transform.position) < 1)
         {
             transform.position = _slot.transform.position;
             _slot.Placed();

@@ -17,6 +17,7 @@ public class CustomButton : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (GameManager.instance.isPaused == true) return;
         onMouseClick?.Invoke();
         onMouseClickNumber?.Invoke(buttonNumber);
     }

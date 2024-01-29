@@ -13,9 +13,11 @@ public class ImageDragAndDrop : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.isPaused == true) return;
         // Detectar clic del mouse
         if (Input.GetMouseButtonDown(0))
         {
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             AudioManager.AudioInstance.PlaySFX("PickUp");
             //_source.PlayOneShot(_pickUpClip);

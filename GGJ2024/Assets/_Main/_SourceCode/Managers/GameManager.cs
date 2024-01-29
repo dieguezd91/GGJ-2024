@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int points;
     public List<string> array1;
     public List<string> array2;
+    public bool isPaused = false;
     [SerializeField] private List<string> games;
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
     [SerializeField] private GameObject pauseMenu;
@@ -123,12 +124,14 @@ public class GameManager : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
+        isPaused = true;
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        isPaused = false;
         Time.timeScale = 1;
     }
 
