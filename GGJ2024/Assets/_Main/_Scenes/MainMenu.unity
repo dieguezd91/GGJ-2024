@@ -1761,6 +1761,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: games.Array.data[0]
+      value: Benson
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: games.Array.data[1]
+      value: Silhouette
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: games.Array.data[2]
+      value: MakeMeme
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: games.Array.data[3]
+      value: FindMeme
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: minigamesDifficultyValues.Array.size
       value: 3
       objectReference: {fileID: 0}

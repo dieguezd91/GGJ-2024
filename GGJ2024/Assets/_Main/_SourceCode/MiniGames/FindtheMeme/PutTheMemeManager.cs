@@ -74,7 +74,7 @@ public class PutTheMemeManager : MonoBehaviour
             }
        
             GameManager.instance.AddPoints(currentPoints);
-            GameManager.instance.LoadNewLevel();
+            //GameManager.instance.LoadNewLevel();
         }
     }
 
