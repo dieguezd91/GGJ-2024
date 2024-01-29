@@ -877,9 +877,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cc1ef375ebee84c8ecb133032db0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingTime: 154412
+  remainingTime: 15
   timer: {fileID: 2066879905}
-  pointsForVictory: 10
+  pointsForVictory: 2
   controlsScreen: {fileID: 2069660575}
   controlsShowingTime: 0
   score: {fileID: 1023117719}
@@ -1771,11 +1771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: currentGame
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: currentRound
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: games.Array.size
