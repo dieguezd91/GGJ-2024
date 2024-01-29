@@ -7,12 +7,12 @@ using TMPro;
 public class Guess : MonoBehaviour
 {
     private GuessBase[] _base;
-    [SerializeField] private int maxCorrectGuesses;
+    [SerializeField] private float maxCorrectGuesses;
     [SerializeField] private float minigameTimer;
     [SerializeField] private float timerBetweenGuesses;
     [SerializeField] private float incorrectTimer;
     [SerializeField] private float questionTimer;
-    [SerializeField] private float scoreIncrease;
+    [SerializeField] private int scoreIncrease;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
     [SerializeField] private TMP_Text question;
@@ -25,12 +25,23 @@ public class Guess : MonoBehaviour
 
     private GuessBase currentGuess;
     private int correctGuesses;
-    private float sillouetteScore;
+    private int sillouetteScore;
+    private DifficultyValuesScriptableObject difficultyValues;
 
 
     private void Start()
     {
+        
         _base = Resources.LoadAll<GuessBase>("Siluetas");
+
+        foreach (DifficultyValuesScriptableObject values in GameManager.instance.minigamesDifficultyValues)
+            if (values.minigameName == "Silouette")
+                difficultyValues = values;
+
+        foreach (MultipleValueVariable val in difficultyValues.variables)
+            if (val.variableName == "maxGuessCount")
+                maxCorrectGuesses = val.value[GameManager.instance.currentRound - 1];
+
         AssigningValues();
         Invoke(nameof(RemoveQuestion), questionTimer);
     }
@@ -38,10 +49,17 @@ public class Guess : MonoBehaviour
     private void Update()
     {
         minigameTimer -= Time.deltaTime;
-        minigameTimerText.text = minigameTimer.ToString();
+        int seconds = Mathf.FloorToInt(minigameTimer % 60);
+        minigameTimerText.text = seconds.ToString();
         if(minigameTimer <= 0)
         {
             DisableButtons();
+            if(correctGuesses < maxCorrectGuesses)
+            {
+                //restar vida
+            }
+            GameManager.instance.AddPoints(sillouetteScore);
+            GameManager.instance.LoadNewLevel();
         }
     }
 
@@ -59,7 +77,7 @@ public class Guess : MonoBehaviour
     public void CorrectGuess()
     {
         ClearListeners();
-        //Reproducir sonido de acierto
+        AudioManager.AudioInstance.PlaySFX("bien");
         sillouetteScore += scoreIncrease;
         scoreText.text = sillouetteScore.ToString();
         normalImage.gameObject.SetActive(true);
@@ -75,7 +93,7 @@ public class Guess : MonoBehaviour
     public void IncorrectGuess()
     {
         ClearListeners();
-        //Reproducir sonido de incorrecto
+        AudioManager.AudioInstance.PlaySFX("mal");
         normalImage.gameObject.SetActive(true);
         silhouette.gameObject.SetActive(false);
         incorrect.gameObject.SetActive(true);

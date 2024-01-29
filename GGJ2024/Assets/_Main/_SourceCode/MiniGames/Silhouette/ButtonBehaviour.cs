@@ -15,6 +15,7 @@ public class ButtonBehaviour : MonoBehaviour
     private Vector3 randomDir;
     private int randomRot;
     private float randomAlpha;
+    private DifficultyValuesScriptableObject difficultyValues;
 
     private void Awake()
     {
@@ -22,6 +23,25 @@ public class ButtonBehaviour : MonoBehaviour
         pos = GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         
+    }
+
+    private void Start()
+    {
+        foreach (DifficultyValuesScriptableObject values in GameManager.instance.minigamesDifficultyValues)
+            if (values.minigameName == "Silouette")
+                difficultyValues = values;
+
+        foreach (MultipleValueVariable speed in difficultyValues.variables)
+            if (speed.variableName == "speed")
+                this.speed = speed.value[GameManager.instance.currentRound - 1];
+
+        foreach (MultipleValueVariable rotSpeed in difficultyValues.variables)
+            if (rotSpeed.variableName == "rotSpeed")
+                this.rotSpeed = rotSpeed.value[GameManager.instance.currentRound - 1];
+
+        foreach (MultipleValueVariable alphaChangeSpeed in difficultyValues.variables)
+            if (alphaChangeSpeed.variableName == "alphaChangeSpeed")
+                this.alphaChangeSpeed = alphaChangeSpeed.value[GameManager.instance.currentRound - 1];
     }
 
     private void OnEnable()
