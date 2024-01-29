@@ -49,7 +49,7 @@ public class ManagerBenson : MonoBehaviour
             if (EndGame()) Win();
             else
             {
-                GameManager.instance.LoadNewLevel();
+                GameManager.instance.GameOver();
             }
             /*Lose();*/
         }

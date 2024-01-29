@@ -59,10 +59,14 @@ public class ManagerGuessPhrase : MonoBehaviour
             DisableButtons();
             if (correctAnswers < maxCorrectAnswers)
             {
-                //restar vida
+                GameManager.instance.GameOver();
             }
-            GameManager.instance.AddPoints(makeMemeScore);
-            GameManager.instance.LoadNewLevel();
+            else
+            {
+                GameManager.instance.AddPoints(makeMemeScore);
+                GameManager.instance.LoadNewLevel();
+            }
+          
         }
     }
 

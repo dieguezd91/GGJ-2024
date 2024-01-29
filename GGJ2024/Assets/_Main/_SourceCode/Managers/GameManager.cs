@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject HUDBenson;
 
     private void Start()
@@ -66,9 +67,7 @@ public class GameManager : MonoBehaviour
         currentGame = 0;
         if (currentRound == 3)
         {
-            currentRound = 1;
-            Reshuffle();
-            LoadMainMenu();
+            SceneManager.LoadScene(5);
         }
         else
         {
@@ -98,14 +97,20 @@ public class GameManager : MonoBehaviour
         points += pointsToAdd;
         Debug.Log($"+{pointsToAdd} pts");
     }
-
+    public void Win()
+    {
+        Debug.Log("Game over");
+        currentGame = 0;
+        currentRound = 0;
+        SceneManager.LoadScene(5);
+    }
     public void GameOver()
     {
         Debug.Log("Game over");
-        HUDBenson.SetActive(false);
-        gameOverScreen.SetActive(true);
+        SceneManager.LoadScene(6);
         currentGame = 0;
         currentRound = 0;
+
     }
 
     public void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);

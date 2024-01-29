@@ -15,7 +15,7 @@ public class Guess : MonoBehaviour
     [SerializeField] private int scoreIncrease;
     [SerializeField] private Image normalImage;
     [SerializeField] private Image silhouette;
-    [SerializeField] private TMP_Text question;
+    [SerializeField] private GameObject question;
     [SerializeField] private TMP_Text correct;
     [SerializeField] private TMP_Text incorrect;
     [SerializeField] private TMP_Text scoreText;
@@ -56,16 +56,21 @@ public class Guess : MonoBehaviour
             DisableButtons();
             if(correctGuesses < maxCorrectGuesses)
             {
+                GameManager.instance.GameOver();
                 //restar vida
             }
-            GameManager.instance.AddPoints(sillouetteScore);
-            GameManager.instance.LoadNewLevel();
+            else
+            {
+                GameManager.instance.AddPoints(sillouetteScore);
+                GameManager.instance.LoadNewLevel();
+            }
+
         }
     }
 
     public void RemoveQuestion()
     {
-        question.gameObject.SetActive(false);
+        question.SetActive(false);
     }
 
     public GuessBase GetRandomGuess()
