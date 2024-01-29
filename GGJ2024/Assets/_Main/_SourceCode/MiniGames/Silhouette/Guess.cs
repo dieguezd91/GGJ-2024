@@ -14,7 +14,7 @@ public class Guess : MonoBehaviour
     [SerializeField] private float questionTimer;
     [SerializeField] private int scoreIncrease;
     [SerializeField] private Image normalImage;
-    [SerializeField] private Image silhouette;
+    [SerializeField] private SpriteRenderer silhouette;
     [SerializeField] private GameObject question;
     [SerializeField] private TMP_Text correct;
     [SerializeField] private TMP_Text incorrect;
