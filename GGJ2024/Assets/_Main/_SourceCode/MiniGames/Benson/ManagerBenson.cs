@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public class ManagerBenson : MonoBehaviour
 {
     public static ManagerBenson instance;
@@ -14,12 +15,15 @@ public class ManagerBenson : MonoBehaviour
     [SerializeField] private TextMeshProUGUI score;
     public DifficultyValuesScriptableObject difficultyValues;
     [SerializeField] GameObject ballSpawner;
+    [SerializeField] private Slider sliderTimer;
 
     private void Start()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
-
+        
+        sliderTimer.maxValue = remainingTime;
+        
         foreach (DifficultyValuesScriptableObject values in GameManager.instance.minigamesDifficultyValues)
             if (values.minigameName == "Benson") difficultyValues = values;
 
@@ -34,7 +38,11 @@ public class ManagerBenson : MonoBehaviour
 
     private void Update()
     {
-        if (remainingTime > 0) remainingTime -= Time.deltaTime;
+        if (remainingTime > 0)
+        {
+            remainingTime -= Time.deltaTime;
+            sliderTimer.value = remainingTime;
+        }
 
         if (remainingTime <= 0)
         {

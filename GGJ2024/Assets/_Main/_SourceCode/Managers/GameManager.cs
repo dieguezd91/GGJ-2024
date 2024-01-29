@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
     public List<Scene> array2;
     [SerializeField] private List<Scene> games;
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject HUDBenson;
 
     private void Start()
     {
@@ -26,7 +30,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.H)) LoadNewLevel();
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy && SceneManagerScript.instance.scene != 0)
+            Pause();
+        else if(Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeInHierarchy)
+            Resume();
     }
 
     private void Randomize()
@@ -84,12 +93,25 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game over");
+        HUDBenson.SetActive(false);
+        gameOverScreen.SetActive(true);
         currentGame = 0;
         currentRound = 0;
-        LoadMainMenu();
     }
 
-    void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
+    public void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
 
     public void ExitGame()
     {
