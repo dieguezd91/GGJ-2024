@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Scene> games;
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject HUDBenson;
 
     private void Start()
     {
@@ -29,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H)) LoadNewLevel();
         
-        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy && SceneManagerScript.instance.scene != 0)
             Pause();
         else if(Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeInHierarchy)
             Resume();
@@ -90,9 +93,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game over");
+        HUDBenson.SetActive(false);
+        gameOverScreen.SetActive(true);
         currentGame = 0;
         currentRound = 0;
-        LoadMainMenu();
     }
 
     public void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
