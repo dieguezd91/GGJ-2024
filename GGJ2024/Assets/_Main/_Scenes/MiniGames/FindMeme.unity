@@ -2125,9 +2125,10 @@ MonoBehaviour:
   timerBar: {fileID: 398830779}
   timer: 0
   gameDuration: 15
-  memesToSpawn: 2
+  memesToSpawn: 0
   counter: 0
   currentPoints: 0
+  maxObjective: 0
   randomSet: []
   images:
   - {fileID: 1093114712}

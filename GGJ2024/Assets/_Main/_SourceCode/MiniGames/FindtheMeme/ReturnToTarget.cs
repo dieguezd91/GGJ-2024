@@ -9,9 +9,21 @@ public class ReturnToTarget : MonoBehaviour
 
     Vector2 _current;
     float initZ;
+    private DifficultyValuesScriptableObject difficultyValues;
+
     private void Awake()
     {
         initZ = transform.position.z;
+    }
+    private void Start()
+    {
+        foreach (DifficultyValuesScriptableObject values in GameManager.instance.minigamesDifficultyValues)
+            if (values.minigameName == "FindMeme")
+                difficultyValues = values;
+        foreach (MultipleValueVariable speed in difficultyValues.variables)
+            if (speed.variableName == "speed")
+                _speed = speed.value[GameManager.instance.currentRound - 1];
+
     }
     void Update()
     {

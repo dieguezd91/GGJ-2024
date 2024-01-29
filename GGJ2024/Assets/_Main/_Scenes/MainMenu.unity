@@ -1778,8 +1778,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: minigamesDifficultyValues.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3486234062740769371, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
+      propertyPath: minigamesDifficultyValues.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a9899778181db94e86b69fe30f56fb5, type: 2}
     - target: {fileID: 3486234062740769372, guid: 6e192a0b59456e549b9876b1baba9f7e, type: 3}
       propertyPath: m_Name
       value: GameManager

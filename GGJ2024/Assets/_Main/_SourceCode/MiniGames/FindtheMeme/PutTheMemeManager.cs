@@ -11,9 +11,9 @@ public class PutTheMemeManager : MonoBehaviour
     [SerializeField] private Transform _slotParent, _pieceParent;
     public Slider timerBar;
     public float timer, gameDuration;
-    public int memesToSpawn;
+    public float memesToSpawn;
     public int counter, currentPoints;
-    public int maxObjective;
+    public float maxObjective;
 
     public List<MemeSlot> randomSet;
     Meme spawnedPiece;
@@ -25,6 +25,7 @@ public class PutTheMemeManager : MonoBehaviour
 
     public List<Meme> memes = new List<Meme>();
     public List<MemeSlot> memeSlots = new List<MemeSlot>();
+    private DifficultyValuesScriptableObject difficultyValues;
 
     private void Awake()
     {
@@ -36,16 +37,26 @@ public class PutTheMemeManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Spawn();
     }
 
     private void Start()
     {
-        Spawn();
+        foreach (DifficultyValuesScriptableObject values in GameManager.instance.minigamesDifficultyValues)
+            if (values.minigameName == "FindMeme")
+                difficultyValues = values;
+        foreach (MultipleValueVariable objective in difficultyValues.variables)
+            if (objective.variableName == "maxObjective")
+                maxObjective = objective.value[GameManager.instance.currentRound - 1];
+
+        foreach (MultipleValueVariable slots in difficultyValues.variables)
+            if (slots.variableName == "slots")
+                memesToSpawn = slots.value[GameManager.instance.currentRound - 1];
     }
 
     void Spawn()
     {
-        randomSet = _slotPrefabs.OrderBy(s => Random.value).Take(memesToSpawn).ToList();
+        randomSet = _slotPrefabs.OrderBy(s => Random.value).Take((int)memesToSpawn).ToList();
 
         for (int i = 0; i < randomSet.Count; i++)
         {
@@ -73,8 +84,8 @@ public class PutTheMemeManager : MonoBehaviour
                 //restar vida
             }
        
+            GameManager.instance.LoadNewLevel();
             GameManager.instance.AddPoints(currentPoints);
-            //GameManager.instance.LoadNewLevel();
         }
     }
 
