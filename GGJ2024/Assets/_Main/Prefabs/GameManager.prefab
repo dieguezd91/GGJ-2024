@@ -118,7 +118,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -172,6 +172,14 @@ PrefabInstance:
     - target: {fileID: 1063774669787765374, guid: 32a145a3ff2dde74aa6b73e96fabacaf, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071726086387804335, guid: 32a145a3ff2dde74aa6b73e96fabacaf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071726086387804335, guid: 32a145a3ff2dde74aa6b73e96fabacaf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00008392334
       objectReference: {fileID: 0}
     - target: {fileID: 6674715345084426320, guid: 32a145a3ff2dde74aa6b73e96fabacaf, type: 3}
       propertyPath: m_Pivot.x

@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         LoadMainMenu();
     }
 
-    void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
+    public void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
 
     public void Pause()
     {

@@ -38,7 +38,11 @@ public class ManagerBenson : MonoBehaviour
 
     private void Update()
     {
-        if (remainingTime > 0) remainingTime -= Time.deltaTime;
+        if (remainingTime > 0)
+        {
+            remainingTime -= Time.deltaTime;
+            sliderTimer.value = remainingTime;
+        }
 
         if (remainingTime <= 0)
         {
@@ -50,8 +54,6 @@ public class ManagerBenson : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timer.text = $"{minutes}:{seconds}";
         score.text = _caughtBalls.ToString();
-        
-               
     }
 
     public void CatchBall()
