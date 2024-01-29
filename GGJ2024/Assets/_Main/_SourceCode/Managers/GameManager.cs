@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         currentGame = 0;
         if (currentRound == 3)
         {
-            currentRound = 0;
+            currentRound = 1;
             Reshuffle();
             LoadMainMenu();
         }
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         {
             currentGame++;
             if (_tutorial) SceneManagerScript.instance.LoadScene(currentGame);
-            else SceneManager.LoadScene(array2[currentGame - 1]);
+            else SceneManager.LoadScene(games[currentGame - 1]);
         }
     }
 
