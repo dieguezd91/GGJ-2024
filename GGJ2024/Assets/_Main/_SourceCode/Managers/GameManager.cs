@@ -1,12 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
-using System.Linq;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,9 +11,9 @@ public class GameManager : MonoBehaviour
     private bool _tutorial;
     public int currentRound;
     public int points;
-    public List<SceneAsset> array1;
-    public List<SceneAsset> array2;
-    [SerializeField] private List<SceneAsset> games;
+    public List<Scene> array1;
+    public List<Scene> array2;
+    [SerializeField] private List<Scene> games;
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
 
     private void Start()
@@ -36,10 +31,10 @@ public class GameManager : MonoBehaviour
 
     private void Randomize()
     {
-        foreach (SceneAsset i in games) array1.Add(i);
+        foreach (Scene i in games) array1.Add(i);
 
         array2.Clear();
-        int b = games.Count;
+        int b = 4; ///HARCORDIE PORQUE EL VALOR DE ESTA VARIABLE ERA UNA LISTA DE ESCENAS.COUNT
         for (int n = 0; n < b; n++)
         {
             int a = Random.Range(0, array1.Count);
