@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public List<Scene> array2;
     [SerializeField] private List<Scene> games;
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
+    [SerializeField] private GameObject pauseMenu;
 
     private void Start()
     {
@@ -26,7 +27,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.H)) LoadNewLevel();
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy)
+            Pause();
+        else if(Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeInHierarchy)
+            Resume();
     }
 
     private void Randomize()
@@ -90,6 +96,18 @@ public class GameManager : MonoBehaviour
     }
 
     void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
 
     public void ExitGame()
     {
