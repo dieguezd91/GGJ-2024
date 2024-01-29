@@ -51,29 +51,29 @@ public class GameManager : MonoBehaviour
             array1.RemoveAt(a);
         }
     }
-    //private void Reshuffle()
-    //{
-    //    for (int t = 0; t < games.Count; t++)
-    //    {
-    //        var tmp = games[t];
-    //        int r = Random.Range(t, games.Count);
-    //        games[t] = games[r];
-    //        games[r] = tmp;
-    //    }
-    //}
+    private void Reshuffle()
+    {
+        for (int t = 0; t < games.Count; t++)
+        {
+            var tmp = games[t];
+            int r = Random.Range(t, games.Count);
+            games[t] = games[r];
+            games[r] = tmp;
+        }
+    }
     void SetNewRound()
     {
         currentGame = 0;
         if (currentRound == 3)
         {
             currentRound = 0;
-            Randomize();
+            Reshuffle();
             LoadMainMenu();
         }
         else
         {
             currentRound++;
-            Randomize();
+            Reshuffle();
             LoadNewLevel();
         }
     }
