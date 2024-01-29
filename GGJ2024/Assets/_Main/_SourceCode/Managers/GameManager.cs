@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public List<string> array1;
     public List<string> array2;
     public bool isPaused = false;
-    [SerializeField] private List<string> games;
+    public List<string> games;
     public DifficultyValuesScriptableObject[] minigamesDifficultyValues;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverScreen;
@@ -30,7 +30,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)) LoadNewLevel();
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            LoadNewLevel();
+        } 
         
         if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy && SceneManagerScript.instance.scene != 0)
             Pause();
@@ -66,10 +69,11 @@ public class GameManager : MonoBehaviour
         currentGame = 0;
         if (currentRound == 3)
         {
-            SceneManager.LoadScene(5);
+            Win();
         }
         else
         {
+            games = array2;
             currentRound++;
             Reshuffle();
             LoadNewLevel();
@@ -100,15 +104,19 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game over");
         currentGame = 0;
-        currentRound = 0;
+        currentRound = 1;
+        _tutorial = true;
+        games = array2;
         SceneManager.LoadScene(5);
     }
     public void GameOver()
     {
         Debug.Log("Game over");
-        SceneManager.LoadScene(6);
         currentGame = 0;
-        currentRound = 0;
+        currentRound = 1;
+        _tutorial = true;
+        games = array2;
+        SceneManager.LoadScene(6);
 
     }
 
@@ -118,8 +126,12 @@ public class GameManager : MonoBehaviour
     public void ResetPause()
     {
         currentGame = 0;
+        currentRound = 1;
+        isPaused = false;
+        _tutorial = true;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        games = array2;
     }
     public void Pause()
     {
