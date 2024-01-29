@@ -5,14 +5,11 @@ using UnityEngine;
 public class Meme : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] private AudioSource _source;
-    [SerializeField] private AudioClip _pickUpClip, _dropClip;
 
     private bool _dragging, _placed;
     private Vector2 _offset, _originalPosition;
 
     private MemeSlot _slot;
-
 
     public void Init(MemeSlot slot)
     {
@@ -34,22 +31,26 @@ public class Meme : MonoBehaviour
     private void OnMouseDown()
     {
         _dragging = true;
-        _source.PlayOneShot(_pickUpClip);
+        AudioManager.AudioInstance.PlaySFX("PickUp");
+        //_source.PlayOneShot(_pickUpClip);
         _offset = GetMousePos() - (Vector2)transform.position;
     }
 
     private void OnMouseUp()
     {
-        if(Vector2.Distance(transform.position, _slot.transform.position) < 3)
+        if(Vector2.Distance(transform.position, _slot.transform.position) < 1)
         {
             transform.position = _slot.transform.position;
             _slot.Placed();
+            PutTheMemeManager._PutTheMemeInstance.currentPoints++;
+            PutTheMemeManager._PutTheMemeInstance.counter++;
             _placed = true;
         }
         else
         {
             transform.position = _originalPosition;
-            _source.PlayOneShot(_dropClip);
+            AudioManager.AudioInstance.PlaySFX("Drop");
+            //_source.PlayOneShot(_dropClip);
             _dragging = false;
         }
     }

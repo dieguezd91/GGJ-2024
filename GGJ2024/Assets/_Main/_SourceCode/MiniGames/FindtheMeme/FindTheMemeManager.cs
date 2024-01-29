@@ -1,29 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FindTheMemeManager : MonoBehaviour
 {
-    [SerializeField] private List<MemeSlot> _slotPrefabs;
-    [SerializeField] private Meme _memePrefab;
-    [SerializeField] private Transform _slotParent, _pieceParent;
+    public Slider timerBar;
+    public float timer, gameDuration;
 
-    private void Start()
+    void Update()
     {
-        Spawn();
+        timer += Time.deltaTime;
+        GameTimer();
     }
-    void Spawn()
+
+    public void GameTimer()
     {
-        var randomSet = _slotPrefabs.OrderBy(s => Random.value).Take(8).ToList();
-
-        for (int i = 0; i < randomSet.Count; i++)
-        {
-            var spawnedSlot = Instantiate(randomSet[i], _slotParent.GetChild(i).position, Quaternion.identity);
-            var spawnedPiece = Instantiate(_memePrefab, _pieceParent.GetChild(i).position, Quaternion.identity);
-
-            spawnedPiece.Init(spawnedSlot);
-        }
+        timerBar.value = timer / gameDuration;
     }
-    
 }

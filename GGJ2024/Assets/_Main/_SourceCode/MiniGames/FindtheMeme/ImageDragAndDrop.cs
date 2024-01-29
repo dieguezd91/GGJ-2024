@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class ImageDragAndDrop : MonoBehaviour
 {
-    [SerializeField] private AudioSource _source;
-    [SerializeField] private AudioClip _pickUpClip, _dropClip;
+    //[SerializeField] private AudioSource _source;
+    //[SerializeField] private AudioClip _pickUpClip, _dropClip;
     private bool isDragging = false;
     private GameObject draggedObject;
     private float distanceToCamera;
 
-    
 
     void Update()
     {
@@ -18,7 +17,8 @@ public class ImageDragAndDrop : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            _source.PlayOneShot(_pickUpClip);
+            AudioManager.AudioInstance.PlaySFX("PickUp");
+            //_source.PlayOneShot(_pickUpClip);
             RaycastHit2D[] hits = Physics2D.RaycastAll(ray.origin, ray.direction);
 
             // Comprobar si se hizo clic en un objeto
@@ -43,7 +43,8 @@ public class ImageDragAndDrop : MonoBehaviour
         // Liberar el objeto cuando se suelta el clic
         if (Input.GetMouseButtonUp(0))
         {
-            _source.PlayOneShot(_dropClip);
+            AudioManager.AudioInstance.PlaySFX("Drop");
+            //_source.PlayOneShot(_dropClip);
             isDragging = false;
         }
 

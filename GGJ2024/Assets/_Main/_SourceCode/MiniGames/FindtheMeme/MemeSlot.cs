@@ -5,10 +5,9 @@ using UnityEngine;
 public class MemeSlot : MonoBehaviour
 {
     public SpriteRenderer Renderer;
-    [SerializeField] private AudioSource _source;
 
     public void Placed()
     {
-        _source.Play();
+        AudioManager.AudioInstance.PlaySFX("Coin");
     }
 }
