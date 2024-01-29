@@ -47,7 +47,11 @@ public class ManagerBenson : MonoBehaviour
         if (remainingTime <= 0)
         {
             if (EndGame()) Win();
-            else Lose();
+            else
+            {
+                GameManager.instance.LoadNewLevel();
+            }
+            /*Lose();*/
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
