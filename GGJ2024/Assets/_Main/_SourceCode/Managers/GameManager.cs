@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -115,6 +113,13 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu() => SceneManagerScript.instance.LoadScene(0);
 
+
+    public void ResetPause()
+    {
+        currentGame = 0;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
     public void Pause()
     {
         pauseMenu.SetActive(true);
