@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 5535928964882876529}
   - component: {fileID: 5535928964882876528}
   - component: {fileID: 5535928964882876428}
-  - component: {fileID: 5535928964882876429}
+  - component: {fileID: 1627436550}
   m_Layer: 5
   m_Name: CanvasIntro
   m_TagString: Untagged
@@ -284,7 +284,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5535928964882876429
+--- !u!114 &1627436550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5535928964882876535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe53277f2f995ee4cb2552870f7cb3da, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ed8b4839ae91294c91e8ca446f8e632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5535928965003738001
