@@ -1560,64 +1560,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: musicSounds.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 2d4d21306efea3448bc663d699ef97df, type: 3}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[0].name
-      value: spamball
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
       propertyPath: sfxSounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 9f196ac410099ed4cb4622f14e533f62, type: 3}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[1].name
-      value: walk
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 56cfc0aff69ff7946a30877d4352a02a, type: 3}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[2].name
-      value: bensonsus
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 869c400eac8938d42aa0a60cc7ed0fe3, type: 3}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[3].name
-      value: catchBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 4c22f63f1782a974e99b112625c068aa, type: 3}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: sfxSounds.Array.data[4].name
-      value: Escupir_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: musicSounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727940745126660902, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
-      propertyPath: musicSounds.Array.data[0].name
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: ab28d3cb8afea7846a98d6a4dd192b1b, type: 3}
     - target: {fileID: 2727940745126660903, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727940745440727895, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
+      propertyPath: Priority
+      value: 148
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727940745440727895, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
+      propertyPath: m_Volume
+      value: 0.555
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 115a2064400ddad4c9cf559ee223d732, type: 3}
@@ -2367,7 +2323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3995030075826862876, guid: a48140021b99948428ab9e3aa4c651b1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.0112915
+      value: -4.0112305
       objectReference: {fileID: 0}
     - target: {fileID: 3995030075826862876, guid: a48140021b99948428ab9e3aa4c651b1, type: 3}
       propertyPath: m_AnchoredPosition.y

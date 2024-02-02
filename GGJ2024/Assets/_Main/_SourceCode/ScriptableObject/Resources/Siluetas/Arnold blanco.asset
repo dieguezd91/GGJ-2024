@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216bb5be84cb4bf4c93f32bbeef96621, type: 3}
   m_Name: Arnold blanco
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: 2204dcf90c1077c4ab873e7705c7c021, type: 3}
+  normal: {fileID: 21300000, guid: 8bfca1bbae718d74ea78dd443733e7ba, type: 3}
   silhouette: {fileID: 21300000, guid: e60a6fd3cb978134fb65e05ea1d5129a, type: 3}
   incorrectAnswers:
   - {fileID: 21300000, guid: 21e806fabcd1dc14ba93e1bd481ef68b, type: 3}

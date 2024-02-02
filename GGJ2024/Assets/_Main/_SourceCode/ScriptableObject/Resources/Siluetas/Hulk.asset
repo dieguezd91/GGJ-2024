@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216bb5be84cb4bf4c93f32bbeef96621, type: 3}
   m_Name: Hulk
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: a2f4463efbe2af84e8eaf49ad2b8d3a1, type: 3}
+  normal: {fileID: 21300000, guid: 53f41f3ae3ad82f409187683954f213a, type: 3}
   silhouette: {fileID: 21300000, guid: b42ed31db8254d74f809cda2e52bbde2, type: 3}
   incorrectAnswers:
   - {fileID: 21300000, guid: ef2eee773fe0eab45b039403d40e5c57, type: 3}

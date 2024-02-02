@@ -47,7 +47,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
+  sfxSounds:
+  - name: spamball
+    clip: {fileID: 8300000, guid: efb4c0c1af9ae3a4e92d6e230a8fa9d9, type: 3}
+  - name: walk
+    clip: {fileID: 8300000, guid: 7f133e6164cd1d344bd6495d74f472e2, type: 3}
+  - name: bensonsus
+    clip: {fileID: 8300000, guid: 56cfc0aff69ff7946a30877d4352a02a, type: 3}
+  - name: catchBall
+    clip: {fileID: 8300000, guid: 9fcb42014db0b0f409144c7c1a76a5a9, type: 3}
+  - name: Escupir_1
+    clip: {fileID: 8300000, guid: 682efb666e5f0e44f990bcdaeb3215bb, type: 3}
   musicSource: {fileID: 2727940746744607818}
   sfxSource: {fileID: 2727940745440727895}
 --- !u!1 &2727940745440727880
@@ -100,7 +110,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 212
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

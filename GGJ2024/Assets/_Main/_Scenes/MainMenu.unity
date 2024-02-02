@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 273709837}
   - component: {fileID: 273709840}
   - component: {fileID: 273709839}
-  - component: {fileID: 273709838}
+  - component: {fileID: 273709841}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -400,26 +400,6 @@ RectTransform:
   m_AnchoredPosition: {x: -23.1012, y: 324.5066}
   m_SizeDelta: {x: 975.8943, y: 136.7227}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &273709838
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273709836}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4cc4e774a233ff74f81e0b6b92b81ac0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &273709839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,6 +438,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273709836}
   m_CullTransparentMesh: 1
+--- !u!95 &273709841
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273709836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3bbf0e4aa4eed754d870515c61bbcee6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &333669116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +1040,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc413baf78e66764c9ecac9d17d275a1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 901b612d1aad3e740b09f815e96e6ac0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 0.85
@@ -1301,7 +1301,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 41047d1edd671c24ab3ce40f28cd14a9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 02eb8c3af51543d498dca65c31fd722c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.88
   m_Pitch: 1
@@ -2243,6 +2243,10 @@ PrefabInstance:
     - target: {fileID: 3995030075826862877, guid: a48140021b99948428ab9e3aa4c651b1, type: 3}
       propertyPath: m_Name
       value: PanelTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995030075826862877, guid: a48140021b99948428ab9e3aa4c651b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48140021b99948428ab9e3aa4c651b1, type: 3}

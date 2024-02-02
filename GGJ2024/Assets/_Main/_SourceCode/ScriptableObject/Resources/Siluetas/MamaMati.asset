@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216bb5be84cb4bf4c93f32bbeef96621, type: 3}
   m_Name: MamaMati
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: db398be351dc048438387002c9d55b2e, type: 3}
+  normal: {fileID: 21300000, guid: 4e0b0dfcd0250db4b8a728ce3c4bd818, type: 3}
   silhouette: {fileID: 21300000, guid: 853cba97428922648b3b81661b4835c3, type: 3}
   incorrectAnswers:
   - {fileID: 21300000, guid: 7f3e15b9f4800f6488eb050d30f80232, type: 3}

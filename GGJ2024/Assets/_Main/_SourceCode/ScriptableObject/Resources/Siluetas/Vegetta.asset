@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216bb5be84cb4bf4c93f32bbeef96621, type: 3}
   m_Name: Vegetta
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: a91e5155969088e4aae331523935f178, type: 3}
+  normal: {fileID: 21300000, guid: d9e6bbacda0a4ab4f8a4b3fc6e438130, type: 3}
   silhouette: {fileID: 21300000, guid: fc10cc8406553ba4b99cb8881e10baf7, type: 3}
   incorrectAnswers:
   - {fileID: 21300000, guid: 3ab7fddd37b860f479de4c9be8e384d1, type: 3}
