@@ -33,7 +33,6 @@ public class ManagerBenson : MonoBehaviour
         foreach (MultipleValueVariable val in difficultyValues.variables)
             if (val.variableName == "movementVelocity") ballSpawner.GetComponent<BensonController>().movementVelocity = val.value[GameManager.instance.currentRound - 1];
 
-        StartCoroutine(ShowControls());
     }
 
     private void Update()
@@ -80,12 +79,4 @@ public class ManagerBenson : MonoBehaviour
 
     public void Lose() => GameManager.instance.GameOver();
 
-
-
-    IEnumerator ShowControls()
-    {
-        controlsScreen.SetActive(true);
-        yield return new WaitForSeconds(controlsShowingTime);
-        controlsScreen.SetActive(false);
-    }
 }
